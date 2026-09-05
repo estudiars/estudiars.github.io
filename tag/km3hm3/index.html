@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+	<title>Jasa Pembuatan Npwp Nganjuk</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Rubik%3A300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito%3A200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik%3A300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito%3A200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik%3A300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito%3A200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" /></noscript>
+
+		<!-- All in One SEO 5.0.1.1 - aioseo.com -->
+	<meta name="description" content="Jasa Pembuatan NPWP Nganjuk - Membutuhkan NPWP untuk menjalankan bisnis di Nganjuk? Tak perlu khawatir! Anda dapat mempercayakan proses pembuatan NPWP kepada JANGKARGROUPS, jasa pembuatan NPWP yang terpercaya dan berpengalaman di Nganjuk. Kami memahami bahwa proses pembuatan NPWP bisa menjadi rumit dan memakan waktu, oleh karena itu JANGKARGROUPS hadir untuk membantu Anda mengurusnya dengan mudah," />
+	<meta name="robots" content="max-image-preview:large" />
+	<meta name="author" content="Hendrawan, S.H."/>
+	<meta name="p:domain_verify" content="f090b4d1bbba6783d70e4d3b675fbd27" />
+	<link rel="canonical" href="https://pt.jangkargroups.co.id/jasa-pembuatan-npwp-nganjuk" />
+	<meta name="generator" content="All in One SEO (AIOSEO) 5.0.1.1" />
+
+		<meta name="google-site-verification" content="EZqkM-PEjvnjtork9ygY3doUuicUokyx_AbCXB2MBf4" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="Jasa Pendirian PT - Proses Mudah, Harga Terjangkau." />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Jasa Pembuatan Npwp Nganjuk" />
+		<meta property="og:description" content="Jasa Pembuatan NPWP Nganjuk - Membutuhkan NPWP untuk menjalankan bisnis di Nganjuk? Tak perlu khawatir! Anda dapat mempercayakan proses pembuatan NPWP kepada JANGKARGROUPS, jasa pembuatan NPWP yang terpercaya dan berpengalaman di Nganjuk. Kami memahami bahwa proses pembuatan NPWP bisa menjadi rumit dan memakan waktu, oleh karena itu JANGKARGROUPS hadir untuk membantu Anda mengurusnya dengan mudah," />
+		<meta property="og:url" content="https://pt.jangkargroups.co.id/jasa-pembuatan-npwp-nganjuk" />
+		<meta property="article:published_time" content="2024-11-15T00:00:53+00:00" />
+		<meta property="article:modified_time" content="2024-11-13T07:01:10+00:00" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Jasa Pembuatan Npwp Nganjuk" />
+		<meta name="twitter:description" content="Jasa Pembuatan NPWP Nganjuk - Membutuhkan NPWP untuk menjalankan bisnis di Nganjuk? Tak perlu khawatir! Anda dapat mempercayakan proses pembuatan NPWP kepada JANGKARGROUPS, jasa pembuatan NPWP yang terpercaya dan berpengalaman di Nganjuk. Kami memahami bahwa proses pembuatan NPWP bisa menjadi rumit dan memakan waktu, oleh karena itu JANGKARGROUPS hadir untuk membantu Anda mengurusnya dengan mudah," />
+		<!-- All in One SEO -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1"><link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link href='https://fonts.googleapis.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Jasa Pendirian PT &raquo; Feed" href="https://pt.jangkargroups.co.id/feed" />
+<link rel="alternate" type="application/rss+xml" title="Jasa Pendirian PT &raquo; Comments Feed" href="https://pt.jangkargroups.co.id/comments/feed" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://pt.jangkargroups.co.id/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpt.jangkargroups.co.id%2Fjasa-pembuatan-npwp-nganjuk" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://pt.jangkargroups.co.id/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpt.jangkargroups.co.id%2Fjasa-pembuatan-npwp-nganjuk&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-categories-inline-css">
+.wp-block-categories{box-sizing:border-box}.wp-block-categories.alignleft{margin-right:2em}.wp-block-categories.alignright{margin-left:2em}.wp-block-categories.wp-block-categories-dropdown.aligncenter{text-align:center}.wp-block-categories .wp-block-categories__label:not(.screen-reader-text){display:block;width:100%}
+/*# sourceURL=https://pt.jangkargroups.co.id/wp-includes/blocks/categories/style.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://pt.jangkargroups.co.id/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-list-inline-css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://pt.jangkargroups.co.id/wp-includes/blocks/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://pt.jangkargroups.co.id/wp-includes/blocks/paragraph/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--contrast: var(--contrast);--wp--preset--color--contrast-2: var(--contrast-2);--wp--preset--color--contrast-3: var(--contrast-3);--wp--preset--color--base: var(--base);--wp--preset--color--base-2: var(--base-2);--wp--preset--color--base-3: var(--base-3);--wp--preset--color--accent: var(--accent);--wp--preset--color--accent-2: var(--accent-2);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-contrast-color{color: var(--wp--preset--color--contrast) !important;}.has-contrast-2-color{color: var(--wp--preset--color--contrast-2) !important;}.has-contrast-3-color{color: var(--wp--preset--color--contrast-3) !important;}.has-base-color{color: var(--wp--preset--color--base) !important;}.has-base-2-color{color: var(--wp--preset--color--base-2) !important;}.has-base-3-color{color: var(--wp--preset--color--base-3) !important;}.has-accent-color{color: var(--wp--preset--color--accent) !important;}.has-accent-2-color{color: var(--wp--preset--color--accent-2) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-contrast-background-color{background-color: var(--wp--preset--color--contrast) !important;}.has-contrast-2-background-color{background-color: var(--wp--preset--color--contrast-2) !important;}.has-contrast-3-background-color{background-color: var(--wp--preset--color--contrast-3) !important;}.has-base-background-color{background-color: var(--wp--preset--color--base) !important;}.has-base-2-background-color{background-color: var(--wp--preset--color--base-2) !important;}.has-base-3-background-color{background-color: var(--wp--preset--color--base-3) !important;}.has-accent-background-color{background-color: var(--wp--preset--color--accent) !important;}.has-accent-2-background-color{background-color: var(--wp--preset--color--accent-2) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-contrast-border-color{border-color: var(--wp--preset--color--contrast) !important;}.has-contrast-2-border-color{border-color: var(--wp--preset--color--contrast-2) !important;}.has-contrast-3-border-color{border-color: var(--wp--preset--color--contrast-3) !important;}.has-base-border-color{border-color: var(--wp--preset--color--base) !important;}.has-base-2-border-color{border-color: var(--wp--preset--color--base-2) !important;}.has-base-3-border-color{border-color: var(--wp--preset--color--base-3) !important;}.has-accent-border-color{border-color: var(--wp--preset--color--accent) !important;}.has-accent-2-border-color{border-color: var(--wp--preset--color--accent-2) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='eztoc-css' href='https://pt.jangkargroups.co.id/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.87' media='all' />
+<style id="eztoc-inline-css">
+div#ez-toc-container .ez-toc-title, .ez-toc-split-section .ez-toc-title {font-size: 120%;}div#ez-toc-container .ez-toc-title, .ez-toc-split-section .ez-toc-title {font-weight: 500;}div#ez-toc-container ul li , div#ez-toc-container ul li a, .ez-toc-split-section ul li , .ez-toc-split-section ul li a {font-size: 95%;}div#ez-toc-container ul li , div#ez-toc-container ul li a, .ez-toc-split-section ul li , .ez-toc-split-section ul li a {font-weight: 500;}div#ez-toc-container nav ul ul li, .ez-toc-split-section nav ul ul li {font-size: 90%;}.ez-toc-box-title {font-weight: bold; margin-bottom: 10px; text-align: center; text-transform: uppercase; letter-spacing: 1px; color: #666; padding-bottom: 5px;position:absolute;top:-4%;left:5%;background-color: inherit;transition: top 0.3s ease;}.ez-toc-box-title.toc-closed {top:-25%;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+/*# sourceURL=eztoc-inline-css */
+</style>
+<link rel='stylesheet' id='generate-widget-areas-css' href='https://pt.jangkargroups.co.id/wp-content/themes/generatepress/assets/css/components/widget-areas.min.css?ver=3.6.1' media='all' />
+<link rel='stylesheet' id='generate-style-css' href='https://pt.jangkargroups.co.id/wp-content/themes/generatepress/assets/css/main.min.css?ver=3.6.1' media='all' />
+<style id="generate-style-inline-css">
+body{background-color:var(--base-3);color:var(--contrast-2);}a{color:var(--accent-2);}a:hover, a:focus, a:active{color:var(--accent);}.grid-container{max-width:1300px;}.wp-block-group__inner-container{max-width:1300px;margin-left:auto;margin-right:auto;}.site-header .header-image{width:30px;}:root{--contrast:#222222;--contrast-2:#4f4f65;--contrast-3:#68687b;--base:#eaeaea;--base-2:#f7f8f9;--base-3:#ffffff;--accent:#17B890;--accent-2:#287698;}:root .has-contrast-color{color:var(--contrast);}:root .has-contrast-background-color{background-color:var(--contrast);}:root .has-contrast-2-color{color:var(--contrast-2);}:root .has-contrast-2-background-color{background-color:var(--contrast-2);}:root .has-contrast-3-color{color:var(--contrast-3);}:root .has-contrast-3-background-color{background-color:var(--contrast-3);}:root .has-base-color{color:var(--base);}:root .has-base-background-color{background-color:var(--base);}:root .has-base-2-color{color:var(--base-2);}:root .has-base-2-background-color{background-color:var(--base-2);}:root .has-base-3-color{color:var(--base-3);}:root .has-base-3-background-color{background-color:var(--base-3);}:root .has-accent-color{color:var(--accent);}:root .has-accent-background-color{background-color:var(--accent);}:root .has-accent-2-color{color:var(--accent-2);}:root .has-accent-2-background-color{background-color:var(--accent-2);}.gp-modal:not(.gp-modal--open):not(.gp-modal--transition){display:none;}.gp-modal--transition:not(.gp-modal--open){pointer-events:none;}.gp-modal-overlay:not(.gp-modal-overlay--open):not(.gp-modal--transition){display:none;}.gp-modal__overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.2);display:flex;justify-content:center;align-items:center;z-index:10000;backdrop-filter:blur(3px);transition:opacity 500ms ease;opacity:0;}.gp-modal--open:not(.gp-modal--transition) .gp-modal__overlay{opacity:1;}.gp-modal__container{max-width:100%;max-height:100vh;transform:scale(0.9);transition:transform 500ms ease;padding:0 10px;}.gp-modal--open:not(.gp-modal--transition) .gp-modal__container{transform:scale(1);}.search-modal-fields{display:flex;}.gp-search-modal .gp-modal__overlay{align-items:flex-start;padding-top:25vh;background:var(--gp-search-modal-overlay-bg-color);}.search-modal-form{width:500px;max-width:100%;background-color:var(--gp-search-modal-bg-color);color:var(--gp-search-modal-text-color);}.search-modal-form .search-field, .search-modal-form .search-field:focus{width:100%;height:60px;background-color:transparent;border:0;appearance:none;color:currentColor;}.search-modal-fields button, .search-modal-fields button:active, .search-modal-fields button:focus, .search-modal-fields button:hover{background-color:transparent;border:0;color:currentColor;width:60px;}h1{font-family:Nunito, sans-serif;font-weight:900;font-size:42px;letter-spacing:1.5px;line-height:1.5em;}@media (max-width:768px){h1{font-size:35px;}}h2{font-family:Nunito, sans-serif;font-weight:900;font-size:36px;line-height:1.5em;}@media (max-width:768px){h2{font-size:32px;}}h3{font-family:Nunito, sans-serif;font-weight:900;font-size:30px;line-height:1.5em;}@media (max-width: 1024px){h3{font-size:28px;}}@media (max-width:768px){h3{font-size:26px;}}h4{font-family:Nunito, sans-serif;font-weight:900;font-size:26px;line-height:1.5em;}@media (max-width: 1024px){h4{font-size:24px;}}h5{font-family:Nunito, sans-serif;font-weight:900;font-size:20px;line-height:1.5em;}h6{font-family:Nunito, sans-serif;font-weight:900;font-size:17px;line-height:1.5em;}body, button, input, select, textarea{font-family:Rubik, sans-serif;font-size:18px;}body{line-height:1.7;}.main-title{font-family:Rubik, sans-serif;text-transform:uppercase;font-size:30px;}.main-navigation a, .main-navigation .menu-toggle, .main-navigation .menu-bar-items{font-weight:600;text-transform:uppercase;font-size:14px;}.widget-title{font-family:Nunito, sans-serif;font-weight:700;font-size:24px;}.main-navigation .main-nav ul ul li a{font-family:inherit;font-size:13px;}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:var(--base-3);}.main-title a,.main-title a:hover{color:var(--accent);}.site-description{color:#757575;}.main-navigation,.main-navigation ul ul{background-color:var(--accent);}.main-navigation .main-nav ul li a, .main-navigation .menu-toggle, .main-navigation .menu-bar-items{color:var(--contrast-2);}.main-navigation .main-nav ul li:not([class*="current-menu-"]):hover > a, .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus > a, .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"]) > a, .main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{color:var(--contrast-2);background-color:var(--accent);}button.menu-toggle:hover,button.menu-toggle:focus{color:var(--contrast-2);}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:var(--contrast);background-color:var(--accent);}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a, .main-navigation .menu-bar-items .search-item.active > a{color:var(--contrast-2);background-color:var(--base-2);opacity:1;}.main-navigation ul ul{background-color:var(--contrast-2);}.main-navigation .main-nav ul ul li a{color:var(--base);}.main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover > a,.main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus > a, .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"]) > a{color:var(--contrast-2);background-color:var(--base-2);}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:var(--contrast-2);background-color:var(--base-3);}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{color:var(--contrast-2);background-color:var(--base-3);}.inside-article a,.paging-navigation a,.comments-area a,.page-header a{color:var(--accent-2);}.inside-article a:hover,.paging-navigation a:hover,.comments-area a:hover,.page-header a:hover{color:var(--accent);}.entry-title a{color:var(--contrast);}.entry-title a:hover{color:var(--contrast-2);}.entry-meta{color:#595959;}h1{color:var(--contrast-2);}h2{color:var(--contrast-2);}h3{color:var(--contrast-2);}h4{color:var(--contrast-2);}h5{color:var(--contrast-2);}h6{color:var(--contrast-2);}.sidebar .widget{background-color:var(--base-3);}.footer-widgets{background-color:var(--base-3);}.footer-widgets .widget-title{color:var(--contrast-2);}.site-info{color:var(--base-3);background-color:var(--contrast-2);}.site-info a{color:var(--base-3);}.site-info a:hover{color:var(--base);}.footer-bar .widget_nav_menu .current-menu-item a{color:var(--base);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:var(--contrast-2);background-color:var(--base-2);border-color:var(--base);}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:var(--contrast-2);background-color:var(--base-3);border-color:var(--base);}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.wp-block-button__link:not(.has-background){color:var(--base-3);background-color:var(--contrast-2);}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:var(--base-3);background-color:var(--accent-2);}a.generate-back-to-top{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}a.generate-back-to-top:hover,a.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}:root{--gp-search-modal-bg-color:var(--base-3);--gp-search-modal-text-color:var(--contrast);--gp-search-modal-overlay-bg-color:rgba(0,0,0,0.2);}@media (max-width: 860px){.main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{background:none;color:var(--contrast-2);}}.nav-below-header .main-navigation .inside-navigation.grid-container, .nav-above-header .main-navigation .inside-navigation.grid-container{padding:0px 20px 0px 20px;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header{padding:100px 40px 100px 40px;}.site-main .wp-block-group__inner-container{padding:100px 40px 100px 40px;}.separate-containers .paging-navigation{padding-top:20px;padding-bottom:20px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-40px;width:calc(100% + 80px);max-width:calc(100% + 80px);}.sidebar .widget, .page-header, .widget-area .main-navigation, .site-main > *{margin-bottom:0px;}.separate-containers .site-main{margin:0px;}.both-right .inside-left-sidebar,.both-left .inside-left-sidebar{margin-right:0px;}.both-right .inside-right-sidebar,.both-left .inside-right-sidebar{margin-left:0px;}.one-container.archive .post:not(:last-child):not(.is-loop-template-item), .one-container.blog .post:not(:last-child):not(.is-loop-template-item){padding-bottom:100px;}.separate-containers .featured-image{margin-top:0px;}.separate-containers .inside-right-sidebar, .separate-containers .inside-left-sidebar{margin-top:0px;margin-bottom:0px;}.main-navigation .main-nav ul ul li a{padding:16px 20px 16px 20px;}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px;}.menu-item-has-children ul .dropdown-menu-toggle{padding-top:16px;padding-bottom:16px;margin-top:-16px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:20px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header{padding:60px 30px 60px 30px;}.site-main .wp-block-group__inner-container{padding:60px 30px 60px 30px;}.inside-top-bar{padding-right:30px;padding-left:30px;}.inside-header{padding-right:30px;padding-left:30px;}.widget-area .widget{padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px;}.footer-widgets-container{padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px;}.inside-site-info{padding-right:30px;padding-left:30px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);}.one-container .site-main .paging-navigation{margin-bottom:0px;}}.is-right-sidebar{width:30%;}.is-left-sidebar{width:30%;}.site-content .content-area{width:70%;}@media (max-width: 860px){.main-navigation .menu-toggle,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav > ul,.has-inline-mobile-toggle #site-navigation .inside-navigation > *:not(.navigation-search):not(.main-nav){display:none;}.nav-align-right .inside-navigation,.nav-align-center .inside-navigation{justify-content:space-between;}.has-inline-mobile-toggle .mobile-menu-control-wrapper{display:flex;flex-wrap:wrap;}.has-inline-mobile-toggle .inside-header{flex-direction:row;text-align:left;flex-wrap:wrap;}.has-inline-mobile-toggle .header-widget,.has-inline-mobile-toggle #site-navigation{flex-basis:100%;}.nav-float-left .has-inline-mobile-toggle #site-navigation{order:10;}}
+.dynamic-author-image-rounded{border-radius:100%;}.dynamic-featured-image, .dynamic-author-image{vertical-align:middle;}.one-container.blog .dynamic-content-template:not(:last-child), .one-container.archive .dynamic-content-template:not(:last-child){padding-bottom:0px;}.dynamic-entry-excerpt > p:last-child{margin-bottom:0px;}
+.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .menu-bar-item > a{transition: line-height 300ms ease}.main-navigation.toggled .main-nav > ul{background-color: var(--accent)}.sticky-enabled .gen-sidebar-nav.is_stuck .main-navigation {margin-bottom: 0px;}.sticky-enabled .gen-sidebar-nav.is_stuck {z-index: 500;}.sticky-enabled .main-navigation.is_stuck {box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);}.navigation-stick:not(.gen-sidebar-nav) {left: 0;right: 0;width: 100% !important;}@media (max-width: 860px){#sticky-placeholder{height:0;overflow:hidden;}.has-inline-mobile-toggle #site-navigation.toggled{margin-top:0;}.has-inline-mobile-menu #site-navigation.toggled .main-nav > ul{top:1.5em;}}.nav-float-right .navigation-stick {width: 100% !important;left: 0;}.nav-float-right .navigation-stick .navigation-branding {margin-right: auto;}.main-navigation.has-sticky-branding:not(.grid-container) .inside-navigation:not(.grid-container) .navigation-branding{margin-left: 10px;}.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container{padding-left:40px;padding-right:40px;}@media (max-width:768px){.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container{padding-left:0;padding-right:0;}}
+/*# sourceURL=generate-style-inline-css */
+</style>
+
+<style id="generateblocks-inline-css">
+.gb-container-c1104196{min-height:-2px;z-index:1;position:relative;margin-top:-20px;margin-bottom:-30px;margin-left:-10px;}.gb-container-67b0b3fc{width:10px;min-height:4px;position:relative;}.gb-container-67b0b3fc > .gb-shapes .gb-shape-1{color:var(--contrast);position:absolute;overflow:hidden;pointer-events:none;line-height:0;left:0;right:0;top:-1px;transform:scaleY(-1) scaleX(-1);}.gb-container-67b0b3fc > .gb-shapes .gb-shape-1 svg{height:10px;width:calc(100% + 1.3px);fill:currentColor;position:relative;left:50%;transform:translateX(-50%);min-width:100%;}.gb-container-ef66b08c{display:flex;align-items:center;column-gap:15px;margin-bottom:30px;}.gb-container-8b4a8489{max-width:1300px;display:flex;justify-content:space-between;column-gap:20px;padding-bottom:100px;margin-right:auto;margin-left:auto;}.gb-container-ec0bcb55{display:flex;align-items:center;}.gb-container-4138dd74{width:150px;height:150px;display:flex;flex-direction:column;justify-content:center;margin-left:-30px;border-top-left-radius:10px;border-bottom-left-radius:10px;background-image:url(https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-768x768.jpeg);background-repeat:no-repeat;background-position:center center;background-size:cover;}.gb-container-4138dd74.gb-has-dynamic-bg{background-image:var(--background-url);}.gb-container-4138dd74.gb-no-dynamic-bg{background-image:none;}.gb-container-a410a475{display:flex;align-items:center;}.gb-container-18430adf{width:150px;height:150px;position:relative;text-align:center;margin-right:-30px;border-top-right-radius:10px;border-bottom-right-radius:10px;background-color:#ffffff;background-image:url(https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1.jpeg);background-repeat:no-repeat;background-position:center center;background-size:cover;}.gb-container-18430adf.gb-has-dynamic-bg{background-image:var(--background-url);}.gb-container-18430adf.gb-no-dynamic-bg{background-image:none;}.gb-container-11ff08cb{max-width:1300px;padding-top:100px;padding-right:40px;margin-right:auto;margin-left:auto;}.gb-container-acf59eb7{padding:30px;border:1px solid var(--base);background-color:var(--base-2);}.gb-container-fbedb304{font-size:15px;margin-bottom:30px;}.gb-container-174f6256{display:flex;column-gap:20px;margin-top:10px;}.gb-container-13f40ef8{margin-top:60px;}.gb-container-c3b5efd0{margin-top:40px;}.gb-container-c72fdb43{height:100%;display:flex;column-gap:15px;margin-bottom:30px;}.gb-container-7b8bbe81{width:33.33%;}.gb-container-75c218c2{width:66.66%;}.gb-container-747dcfe7{max-width:1300px;margin-right:auto;margin-left:auto;}.gb-container-fa2ffe92{display:flex;flex-wrap:wrap;column-gap:10px;row-gap:10px;}.gb-container-ba23d58b{background-color:var(--contrast);}.gb-container-ba23d58b > .gb-inside-container{padding:100px 40px;max-width:1300px;margin-left:auto;margin-right:auto;z-index:1;position:relative;}.gb-grid-wrapper > .gb-grid-column-ba23d58b > .gb-container{display:flex;flex-direction:column;height:100%;}.gb-grid-wrapper > .gb-grid-column-79e5c517{width:33.33%;}.gb-container-c039f873{height:100%;}.gb-grid-wrapper > .gb-grid-column-c039f873{width:33.33%;}.gb-grid-wrapper > .gb-grid-column-b43166c8{width:33.33%;}.gb-container-3a035f8d{background-color:var(--contrast-2);}.gb-container-a9a9c67e{max-width:1300px;display:flex;align-items:center;column-gap:20px;padding:25px 40px;margin-right:auto;margin-left:auto;}.gb-container-7003965f{display:flex;align-items:center;column-gap:20px;}p.gb-headline-3c15dddf{display:inline-flex;align-items:center;font-size:16px;font-weight:600;padding:10px 20px;margin-top:0px;margin-bottom:0px;color:var(--base-3);background-color:var(--contrast-2);}p.gb-headline-3c15dddf a{color:var(--base-3);}p.gb-headline-3c15dddf a:hover{color:var(--base);}p.gb-headline-3c15dddf .gb-icon{line-height:0;padding-right:1em;}p.gb-headline-3c15dddf .gb-icon svg{width:1em;height:1em;fill:currentColor;}h1.gb-headline-927874de{font-size:30px;}p.gb-headline-1db58ca0{font-size:15px;padding-right:15px;margin-bottom:0px;border-right:1px solid var(--base);}p.gb-headline-8d111f7a{font-size:15px;padding-right:15px;margin-bottom:0px;border-right:1px solid var(--base);}p.gb-headline-e312a067{font-size:15px;margin-bottom:0px;}h2.gb-headline-2acc62a4{font-size:20px;line-height:1.3em;font-weight:700;text-align:left;padding:10px;margin-bottom:0em;margin-left:-2em;border-top-left-radius:10px;border-bottom-left-radius:10px;color:var(--contrast-2);background-color:#ffffff;}h2.gb-headline-2acc62a4 a{color:var(--contrast-2);}h2.gb-headline-2acc62a4 a:hover{color:var(--contrast);}h2.gb-headline-9d97a37f{z-index:1;position:relative;font-size:20px;line-height:1.3em;font-weight:700;text-align:right;padding:10px;margin-right:-2em;margin-bottom:0em;border-top-right-radius:10px;border-bottom-right-radius:10px;color:var(--contrast-2);background-color:#ffffff;}h2.gb-headline-9d97a37f a{color:var(--contrast-2);}h2.gb-headline-9d97a37f a:hover{color:var(--contrast);}h2.gb-headline-673c28c2{font-size:20px;margin-top:10px;margin-bottom:0px;}p.gb-headline-334d71fb{font-size:15px;margin-bottom:15px;}h2.gb-headline-c5d0f533{display:inline-block;font-size:20px;text-transform:uppercase;padding-bottom:10px;margin-bottom:20px;border-bottom:3px solid var(--base);}h2.gb-headline-b7e2af5f{display:inline-block;font-size:20px;text-transform:uppercase;padding-bottom:10px;margin-top:30px;margin-bottom:26px;border-bottom:3px solid var(--base);}h3.gb-headline-5f76df96{font-size:17px;margin-bottom:0px;}h3.gb-headline-5f76df96 a{color:var(--contrast-3);}h3.gb-headline-5f76df96 a:hover{color:var(--contrast-2);}p.gb-headline-134db106{font-size:14px;margin-bottom:0px;}h2.gb-headline-175ee41e{display:inline-block;font-size:20px;text-transform:uppercase;padding-bottom:10px;margin-top:30px;margin-bottom:26px;border-bottom:3px solid var(--base);}h2.gb-headline-e25eb4fb{font-size:20px;text-transform:uppercase;margin-bottom:15px;color:var(--base-3);}h3.gb-headline-15493296{font-size:20px;text-transform:uppercase;margin-bottom:15px;color:var(--base-3);}h3.gb-headline-226bbb23{font-size:20px;text-transform:uppercase;margin-bottom:15px;color:var(--base-3);}h3.gb-headline-f641d256{font-size:20px;text-transform:uppercase;margin-bottom:15px;color:var(--base-3);}p.gb-headline-102b5a4a{flex-grow:1;font-size:15px;margin-bottom:0px;color:var(--base);}p.gb-headline-102b5a4a a{color:var(--base);}p.gb-headline-102b5a4a a:hover{color:var(--base-3);}p.gb-headline-6b46c508{font-size:15px;text-transform:capitalize;margin-bottom:0px;}p.gb-headline-6b46c508 a{color:var(--base);}p.gb-headline-6b46c508 a:hover{color:var(--base-3);}p.gb-headline-5acf988e{font-size:15px;text-transform:capitalize;margin-bottom:0px;}p.gb-headline-5acf988e a{color:var(--base);}p.gb-headline-5acf988e a:hover{color:var(--base-3);}p.gb-headline-5e5b1560{font-size:15px;text-transform:capitalize;margin-bottom:0px;}p.gb-headline-5e5b1560 a{color:var(--base);}p.gb-headline-5e5b1560 a:hover{color:var(--base-3);}.gb-block-image-d06a53d3{margin-bottom:20px;}.gb-image-d06a53d3{height:600px;object-fit:cover;vertical-align:middle;}.gb-image-14f4d6b9{height:75px;object-fit:cover;vertical-align:middle;}a.gb-button-a3aaad4c{display:inline-flex;align-items:center;justify-content:center;z-index:1;position:relative;width:60px;height:60px;text-align:center;padding:15px;border-radius:50%;border:7px solid var(--base);background-color:var(--contrast);color:var(--base-3);text-decoration:none;}a.gb-button-a3aaad4c:hover, a.gb-button-a3aaad4c:active, a.gb-button-a3aaad4c:focus{background-color:var(--contrast-2);}a.gb-button-a3aaad4c .gb-icon{font-size:1em;line-height:0;}a.gb-button-a3aaad4c .gb-icon svg{height:1em;width:1em;fill:currentColor;}a.gb-button-139d60e4{display:inline-flex;align-items:center;justify-content:center;z-index:1;position:relative;width:60px;height:60px;order:1;text-align:center;padding:15px;border-radius:50%;border:7px solid var(--base);background-color:var(--contrast);color:var(--base-3);text-decoration:none;}a.gb-button-139d60e4:hover, a.gb-button-139d60e4:active, a.gb-button-139d60e4:focus{background-color:var(--contrast-2);}a.gb-button-139d60e4 .gb-icon{font-size:1em;line-height:0;}a.gb-button-139d60e4 .gb-icon svg{height:1em;width:1em;fill:currentColor;}a.gb-button-800b67cf{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding-top:1px;color:var(--contrast-2);text-decoration:none;}a.gb-button-800b67cf:hover, a.gb-button-800b67cf:active, a.gb-button-800b67cf:focus{color:var(--accent);}a.gb-button-800b67cf .gb-icon{font-size:1em;line-height:0;}a.gb-button-800b67cf .gb-icon svg{height:1em;width:1em;fill:currentColor;}a.gb-button-f7f618b7{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding-top:1px;color:var(--contrast-2);text-decoration:none;}a.gb-button-f7f618b7:hover, a.gb-button-f7f618b7:active, a.gb-button-f7f618b7:focus{color:var(--accent);}a.gb-button-f7f618b7 .gb-icon{font-size:1em;line-height:0;}a.gb-button-f7f618b7 .gb-icon svg{height:1em;width:1em;fill:currentColor;}a.gb-button-8373d550{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:10px;border-radius:3px;background-color:var(--contrast-2);color:var(--base-3);text-decoration:none;}a.gb-button-8373d550:hover, a.gb-button-8373d550:active, a.gb-button-8373d550:focus{background-color:var(--accent);color:var(--base-3);}a.gb-button-8373d550 .gb-icon{font-size:1em;line-height:0;}a.gb-button-8373d550 .gb-icon svg{height:1em;width:1em;fill:currentColor;}a.gb-button-00cc5fe0{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:10px;border-radius:3px;background-color:var(--contrast-2);color:var(--base-3);text-decoration:none;}a.gb-button-00cc5fe0:hover, a.gb-button-00cc5fe0:active, a.gb-button-00cc5fe0:focus{background-color:var(--accent);color:var(--base-3);}a.gb-button-00cc5fe0 .gb-icon{font-size:1em;line-height:0;}a.gb-button-00cc5fe0 .gb-icon svg{height:1em;width:1em;fill:currentColor;}a.gb-button-3b6a19e6{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:10px;border-radius:3px;background-color:var(--contrast-2);color:var(--base-3);text-decoration:none;}a.gb-button-3b6a19e6:hover, a.gb-button-3b6a19e6:active, a.gb-button-3b6a19e6:focus{background-color:var(--accent);color:var(--base-3);}a.gb-button-3b6a19e6 .gb-icon{font-size:1em;line-height:0;}a.gb-button-3b6a19e6 .gb-icon svg{height:1em;width:1em;fill:currentColor;}a.gb-button-b3608840{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:10px;border-radius:3px;background-color:var(--contrast-2);color:var(--base-3);text-decoration:none;}a.gb-button-b3608840:hover, a.gb-button-b3608840:active, a.gb-button-b3608840:focus{background-color:var(--accent);color:var(--base-3);}a.gb-button-b3608840 .gb-icon{font-size:1em;line-height:0;}a.gb-button-b3608840 .gb-icon svg{height:1em;width:1em;fill:currentColor;}.gb-grid-wrapper-bffd2ef6{display:flex;flex-wrap:wrap;margin-left:-20px;}.gb-grid-wrapper-bffd2ef6 > .gb-grid-column{box-sizing:border-box;padding-left:20px;}.gb-grid-wrapper-a653f470{display:flex;flex-wrap:wrap;margin-left:-80px;}.gb-grid-wrapper-a653f470 > .gb-grid-column{box-sizing:border-box;padding-left:80px;}@media (max-width: 1024px) {.gb-container-8b4a8489{flex-direction:column;row-gap:40px;}.gb-container-4138dd74{width:50%;border-bottom-left-radius:0px;}.gb-grid-wrapper > .gb-grid-column-4138dd74{width:50%;}.gb-container-18430adf{width:50%;border-bottom-right-radius:0px;}.gb-grid-wrapper > .gb-grid-column-18430adf{width:50%;}.gb-container-ba23d58b > .gb-inside-container{padding-top:80px;padding-bottom:80px;}.gb-grid-wrapper > .gb-grid-column-79e5c517{width:100%;}.gb-grid-wrapper > .gb-grid-column-c039f873{width:50%;}.gb-grid-wrapper > .gb-grid-column-b43166c8{width:50%;}.gb-image-d06a53d3{height:500px;}.gb-grid-wrapper-a653f470{margin-left:-60px;}.gb-grid-wrapper-a653f470 > .gb-grid-column{padding-left:60px;padding-bottom:40px;}}@media (max-width: 1024px) and (min-width: 768px) {.gb-grid-wrapper > div.gb-grid-column-79e5c517{padding-bottom:0;}}@media (max-width: 767px) {.gb-container-c1104196{margin-top:0px;}.gb-container-ef66b08c{flex-wrap:wrap;row-gap:15px;}.gb-container-8b4a8489{padding-right:30px;padding-bottom:60px;padding-left:30px;}.gb-container-4138dd74{width:50%;border-top-left-radius:5px;border-bottom-left-radius:0px;}.gb-grid-wrapper > .gb-grid-column-4138dd74{width:50%;}.gb-container-18430adf{width:50%;border-top-right-radius:5px;border-bottom-right-radius:0px;}.gb-grid-wrapper > .gb-grid-column-18430adf{width:50%;}.gb-container-11ff08cb{padding:60px 30px;}.gb-grid-wrapper > .gb-grid-column-c72fdb43{width:100%;}.gb-container-ba23d58b > .gb-inside-container{padding:60px 30px;}.gb-grid-wrapper > .gb-grid-column-79e5c517{width:100%;}.gb-grid-wrapper > div.gb-grid-column-79e5c517{padding-bottom:0;}.gb-grid-wrapper > .gb-grid-column-c039f873{width:100%;}.gb-grid-wrapper > .gb-grid-column-b43166c8{width:100%;}.gb-container-a9a9c67e{flex-direction:column;justify-content:center;row-gap:20px;padding-right:30px;padding-bottom:25px;padding-left:30px;}.gb-container-7003965f{justify-content:center;}p.gb-headline-3c15dddf{font-size:15px;}h1.gb-headline-927874de{font-size:26px;}p.gb-headline-1db58ca0{font-size:14px;}p.gb-headline-8d111f7a{font-size:14px;}p.gb-headline-e312a067{font-size:14px;}h2.gb-headline-2acc62a4{font-size:17px;border-radius:5px;}h2.gb-headline-9d97a37f{font-size:17px;border-radius:5px;}p.gb-headline-102b5a4a{text-align:center;}.gb-image-d06a53d3{height:400px;}.gb-block-image-14f4d6b9{margin-bottom:10px;}.gb-image-14f4d6b9{height:125px;}a.gb-button-a3aaad4c .gb-icon{font-size:0.8em;}a.gb-button-139d60e4 .gb-icon{font-size:0.8em;}.gb-grid-wrapper-a653f470 > .gb-grid-column{padding-bottom:60px;}}:root{--gb-container-width:1300px;}.gb-container .wp-block-image img{vertical-align:middle;}.gb-grid-wrapper .wp-block-image{margin-bottom:0;}.gb-highlight{background:none;}.gb-shape{line-height:0;}
+/*# sourceURL=generateblocks-inline-css */
+</style>
+<link rel='stylesheet' id='generate-offside-css' href='https://pt.jangkargroups.co.id/wp-content/plugins/gp-premium/menu-plus/functions/css/offside.min.css?ver=2.5.6' media='all' />
+<style id="generate-offside-inline-css">
+:root{--gp-slideout-width:265px;}.slideout-navigation.main-navigation{background-color:var(--contrast-2);}.slideout-navigation.main-navigation .main-nav ul li a{color:var(--base-2);}.slideout-navigation.main-navigation ul ul{background-color:var(--contrast-3);}.slideout-navigation.main-navigation .main-nav ul ul li a{color:var(--base-3);}.slideout-navigation.main-navigation .main-nav ul li:not([class*="current-menu-"]):hover > a, .slideout-navigation.main-navigation .main-nav ul li:not([class*="current-menu-"]):focus > a, .slideout-navigation.main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"]) > a{color:var(--contrast-2);background-color:var(--base);}.slideout-navigation.main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover > a, .slideout-navigation.main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus > a, .slideout-navigation.main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"]) > a{color:var(--contrast-2);background-color:var(--base-2);}.slideout-navigation.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:var(--contrast-2);background-color:var(--base-3);}.slideout-navigation.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:var(--contrast-2);background-color:var(--base-3);}.slideout-navigation, .slideout-navigation a{color:var(--base-2);}.slideout-navigation button.slideout-exit{color:var(--base-2);padding-left:20px;padding-right:20px;}.slide-opened nav.toggled .menu-toggle:before{display:none;}@media (max-width: 860px){.menu-bar-item.slideout-toggle{display:none;}}
+/*# sourceURL=generate-offside-inline-css */
+</style>
+<style id="rocket-lazyload-inline-css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://pt.jangkargroups.co.id/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}.wp-embed-responsive .wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+/*# sourceURL=rocket-lazyload-inline-css */
+</style>
+<script type="rocketlazyloadscript" id="jquery-core-js" src="https://pt.jangkargroups.co.id/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script type="rocketlazyloadscript" id="jquery-migrate-js" src="https://pt.jangkargroups.co.id/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" defer></script>
+<link rel="https://api.w.org/" href="https://pt.jangkargroups.co.id/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://pt.jangkargroups.co.id/wp-json/wp/v2/posts/39032" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://pt.jangkargroups.co.id/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1" />
+<link rel='shortlink' href='https://pt.jangkargroups.co.id/?p=39032' />
+
+
+<script type="application/ld+json" class="saswp-schema-markup-output">
+[{"@context":"https:\/\/schema.org\/","@type":"LocalBusiness","@id":"ContactPage","url":"https:\/\/pt.jangkargroups.co.id\/contact","name":"Contact","description":"Berikut cara menghubungi kami:","address":{"@type":"PostalAddress","streetAddress":"l. Sumatera No. 69","addressLocality":"Bandung","addressRegion":"Jawa Barat","postalCode":"40115","addressCountry":"Indonesia"},"telephone":"+6287735387748","openingHours":[""],"additionalType":"","priceRange":"","servesCuisine":"","areaServed":[],"founder":[],"employee":[],"makesOffer":{"@type":"Offer","@id":"#service","itemOffered":{"@type":"Service","name":"","url":"","areaServed":[]}},"hasMenu":"","hasMap":"","image":[{"@type":"ImageObject","@id":"https:\/\/pt.jangkargroups.co.id\/jasa-pembuatan-npwp-nganjuk#primaryimage","url":"https:\/\/pt.jangkargroups.co.id\/wp-content\/uploads\/2026\/01\/Jasa-Pendirian-PT-1-1.jpeg","width":"2048","height":"2048"},{"@type":"ImageObject","url":"https:\/\/pt.jangkargroups.co.id\/wp-content\/uploads\/2026\/01\/Jasa-Pendirian-PT-1-1-1200x900.jpeg","width":"1200","height":"900"},{"@type":"ImageObject","url":"https:\/\/pt.jangkargroups.co.id\/wp-content\/uploads\/2026\/01\/Jasa-Pendirian-PT-1-1-1200x675.jpeg","width":"1200","height":"675"},{"@type":"ImageObject","url":"https:\/\/pt.jangkargroups.co.id\/wp-content\/uploads\/2026\/01\/Jasa-Pendirian-PT-1-1.jpeg","width":"2048","height":"2048"},{"@type":"ImageObject","url":"https:\/\/pt.jangkargroups.co.id\/wp-content\/uploads\/2026\/01\/Jasa-Pendirian-PT-1.jpeg","width":2048,"height":2048,"caption":"700"},{"@type":"ImageObject","url":"https:\/\/pt.jangkargroups.co.id\/wp-content\/uploads\/2026\/01\/Jasa-Pendirian-PT-1.jpeg","width":2048,"height":2048,"caption":"700"}]},
+
+{"@context":"https:\/\/schema.org\/","@type":"LegalService","@id":"LocalBusiness","url":"https:\/\/pt.jangkargroups.co.id\/layanan","name":"NEWRaffa","description":"Layanan Jasa NEWRAFFA Kami hadir sebagai solusi jasa pendirian PT yang profesional dan berpengalaman. Profesional Pengalaman","address":{"@type":"PostalAddress","streetAddress":"Jl. Sumatera No. 69","addressLocality":"Bandung","addressRegion":"Jawa barat","postalCode":"40115","addressCountry":"Indonesia"},"telephone":"+6287735387748","openingHours":[""],"image":"https:\/\/pt.jangkargroups.co.id\/wp-content\/uploads\/2024\/10\/Untitled-image-1-2.jpeg","additionalType":"","priceRange":"2.000.000 - 15.000.000","servesCuisine":"","areaServed":[{"@type":"Place","name":"Bandung dan Sekitar"}],"founder":[],"employee":[],"makesOffer":{"@type":"Offer","@id":"#service","itemOffered":{"@type":"Service","name":"Jasa Pendirian PT NEWRaffa","url":"https:\/\/pt.jangkargroups.co.id\/layanan","areaServed":[{"@type":"Place","name":"Bandung dan Sekitar"}]}},"hasMenu":"http:\/\/JASA%20PENDIRIAN%20PT","hasMap":"","geo":{"@type":"GeoCoordinates","latitude":"-6.9088353","longitude":"107.6122609"}},
+
+{"@context":"https:\/\/schema.org\/","@graph":[{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/pt.jangkargroups.co.id\/#home","name":"Home","url":"https:\/\/pt.jangkargroups.co.id\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/pt.jangkargroups.co.id\/#about","name":"About","url":"https:\/\/pt.jangkargroups.co.id\/about"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/pt.jangkargroups.co.id\/#layanan","name":"Layanan","url":"https:\/\/pt.jangkargroups.co.id\/layanan"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/pt.jangkargroups.co.id\/#team","name":"Team","url":"https:\/\/pt.jangkargroups.co.id\/team"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/pt.jangkargroups.co.id\/#contact","name":"Contact","url":"https:\/\/pt.jangkargroups.co.id\/contact"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/pt.jangkargroups.co.id\/#laporan-tahunan-pt","name":"Laporan Tahunan PT","url":"https:\/\/pt.jangkargroups.co.id\/laporan-tahunan-pt-ahu"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/pt.jangkargroups.co.id\/#terms","name":"Terms","url":"https:\/\/pt.jangkargroups.co.id\/terms"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/pt.jangkargroups.co.id\/#faq","name":"FAQ","url":"https:\/\/pt.jangkargroups.co.id\/category\/faq"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/pt.jangkargroups.co.id\/#blog","name":"Blog","url":"https:\/\/pt.jangkargroups.co.id\/blog"}]},
+
+{"@context":"https:\/\/schema.org\/","@type":"WebSite","@id":"https:\/\/pt.jangkargroups.co.id#website","headline":"Jasa Pendirian PT","name":"Jasa Pendirian PT","url":"https:\/\/pt.jangkargroups.co.id","description":"Proses Mudah, Harga Terjangkau.","potentialAction":{"@type":"SearchAction","target":"https:\/\/pt.jangkargroups.co.id?s={search_term_string}","query-input":"required name=search_term_string"}},
+
+{"@context":"https:\/\/schema.org\/","@type":"BreadcrumbList","@id":"https:\/\/pt.jangkargroups.co.id\/jasa-pembuatan-npwp-nganjuk#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pt.jangkargroups.co.id","name":"Jasa Pendirian PT"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/pt.jangkargroups.co.id\/category\/npwp","name":"NPWP"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pt.jangkargroups.co.id\/jasa-pembuatan-npwp-nganjuk","name":"Jasa Pembuatan Npwp Nganjuk"}}]},
+
+{"@context":"https:\/\/schema.org\/","@type":"Organization","@id":"https:\/\/pt.jangkargroups.co.id#Organization","name":"Jasa Pendirian PT","url":"https:\/\/pt.jangkargroups.co.id","sameAs":["https:\/\/www.youtube.com\/@ptghabs1600"],"legalName":"NEWRaffa","logo":{"@type":"ImageObject","url":"https:\/\/pt.jangkargroups.co.id\/wp-content\/uploads\/2024\/10\/logo-new-raffa-16050222.jpg","width":"160","height":"56"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","telephone":"+6287735387748","url":"https:\/\/api.whatsapp.com\/send?phone=6287735387748&amp;text=Hallo+Pendirian+PT+NEWRaffa+saya+mau+konsultasi+tentang...&amp;l=en"}}]
+</script>
+
+<link rel="icon" href="https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-logo-newraffa-pt-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-logo-newraffa-pt-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-logo-newraffa-pt-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-logo-newraffa-pt-270x270.jpg" />
+<style id="wp-custom-css">
+
+.wa-button {
+	position:fixed;bottom:100px;right:2px;z-index:1000;
+}
+.wa-button img {width:250px;display:block;z-index:1000;}
+
+.call-button {
+	position:fixed;bottom:30px;right:2px;z-index:1000;
+}
+.call-button img {width:60px;display:block;z-index:1000;}
+
+.et_pb_scroll_top.et-pb-icon {
+  background: rgb(210, 38, 135) !important;
+  bottom: 180px !important;
+	right: 10px !important;
+}
+/* Resize featured image mobile */
+@media (max-width: 190px) {
+    .post-image img {
+        width: 760px;
+    }
+}/* GeneratePress Site CSS */ /* Right sidebar */ 
+.wp-block-categories {
+	list-style: none;
+	margin-left: 0;
+}
+.wp-block-categories li:not(last-child) {
+	padding-bottom: 6px;
+	margin-bottom: 6px;
+	border-bottom: 1px solid var(--base);
+}
+.wp-block-categories li a {
+	font-size: 16px;
+}
+
+/* Box shadow */ 
+.box-shadow {
+	box-shadow: 0px 0px 25px -12px rgba(0,0,0,0.2);
+} /* End GeneratePress Site CSS */
+.archive .gb-headline-a55ce89a {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+.archive .gb-shape-1 {
+  display: none !important;
+}
+.archive .gb-headline-a55ce89a {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+.archive .gb-container-9fcbb819 .gb-shape-1 {
+  display: none;
+}
+/* Menyembunyikan Featured Image di semua Halaman (Page) */
+.page .featured-image.page-header-image {
+    display: none !important;
+}
+</style>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+<body class="wp-singular post-template-default single single-post postid-39032 single-format-standard wp-embed-responsive wp-theme-generatepress slideout-enabled slideout-mobile sticky-menu-fade sticky-enabled both-sticky-menu right-sidebar nav-float-right separate-containers header-aligned-left dropdown-hover featured-image-active"  >
+	<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<header class="site-header has-inline-mobile-toggle" id="masthead" aria-label="Site"   >
+			<div class="inside-header grid-container">
+				<div class="site-branding">
+						<p class="main-title" >
+					<a href="https://pt.jangkargroups.co.id/" rel="home" data-wpel-link="internal">Jasa Pendirian PT</a>
+				</p>
+						
+					</div>	<nav class="main-navigation mobile-menu-control-wrapper" id="mobile-menu-control-wrapper" aria-label="Mobile Toggle">
+		<div class="menu-bar-items">	<span class="menu-bar-item">
+		<a href="#" role="button" aria-label="Open search" aria-haspopup="dialog" aria-controls="gp-search" data-gpmodal-trigger="gp-search"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill-rule="evenodd" clip-rule="evenodd" d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span></a>
+	</span>
+	</div>		<button data-nav="site-navigation" class="menu-toggle" aria-controls="generate-slideout-menu" aria-expanded="false">
+			<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="screen-reader-text">Menu</span>		</button>
+	</nav>
+			<nav class="main-navigation has-menu-bar-items sub-menu-right" id="site-navigation" aria-label="Primary"   >
+			<div class="inside-navigation grid-container">
+								<button class="menu-toggle" aria-controls="generate-slideout-menu" aria-expanded="false">
+					<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="screen-reader-text">Menu</span>				</button>
+				<div id="primary-menu" class="main-nav"><ul id="menu-main" class=" menu sf-menu"><li id="menu-item-371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-371"><a href="https://pt.jangkargroups.co.id/" data-wpel-link="internal">Home</a></li>
+<li id="menu-item-4867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4867"><a href="https://pt.jangkargroups.co.id/about" data-wpel-link="internal">About</a></li>
+<li id="menu-item-4819" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4819"><a href="https://pt.jangkargroups.co.id/layanan" data-wpel-link="internal">Layanan</a></li>
+<li id="menu-item-367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="https://pt.jangkargroups.co.id/team" data-wpel-link="internal">Team</a></li>
+<li id="menu-item-4866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4866"><a href="https://pt.jangkargroups.co.id/contact" data-wpel-link="internal">Contact</a></li>
+<li id="menu-item-54032" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54032"><a href="https://pt.jangkargroups.co.id/laporan-tahunan-pt-ahu" data-wpel-link="internal">Laporan Tahunan PT</a></li>
+<li id="menu-item-15798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15798"><a href="https://pt.jangkargroups.co.id/terms" data-wpel-link="internal">Terms</a></li>
+<li id="menu-item-44576" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-44576"><a href="https://pt.jangkargroups.co.id/category/faq" data-wpel-link="internal">FAQ</a></li>
+<li id="menu-item-369" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-369"><a href="https://pt.jangkargroups.co.id/blog" data-wpel-link="internal">Blog</a></li>
+</ul></div><div class="menu-bar-items">	<span class="menu-bar-item">
+		<a href="#" role="button" aria-label="Open search" aria-haspopup="dialog" aria-controls="gp-search" data-gpmodal-trigger="gp-search"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill-rule="evenodd" clip-rule="evenodd" d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span></a>
+	</span>
+	</div>			</div>
+		</nav>
+					</div>
+		</header>
+		
+	<div class="site grid-container container hfeed" id="page">
+				<div class="site-content" id="content">
+			
+	<div class="content-area" id="primary">
+		<main class="site-main" id="main">
+			<div class="aioseo-breadcrumbs"><span class="aioseo-breadcrumb">
+			<a href="https://pt.jangkargroups.co.id" title="Home" data-wpel-link="internal">Home</a>
+		</span><span class="aioseo-breadcrumb-separator">»</span><span class="aioseo-breadcrumb">
+			<a href="https://pt.jangkargroups.co.id/category/npwp" title="NPWP" data-wpel-link="internal">NPWP</a>
+		</span><span class="aioseo-breadcrumb-separator">»</span><span class="aioseo-breadcrumb">
+			Jasa Pembuatan Npwp Nganjuk
+		</span></div><article id="post-39032" class="dynamic-content-template post-39032 post type-post status-publish format-standard has-post-thumbnail hentry category-npwp tag-jasa-pembuatan-npwp tag-npwp-nganjuk tag-npwp-online tag-pajak-nganjuk tag-pengurusan-npwp"><div class="inside-article"><div class="gb-container gb-container-c1104196">
+<p class="gb-headline gb-headline-3c15dddf"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"></path></svg></span><span class="gb-headline-text"><span class="post-term-item term-npwp"><a href="https://pt.jangkargroups.co.id/category/npwp" data-wpel-link="internal">NPWP</a></span></span></p>
+
+<div class="gb-container gb-container-67b0b3fc"><div class="gb-shapes"><div class="gb-shape gb-shape-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" preserveAspectRatio="none"><path d="M1200 360H0V0l1200 348z"/></svg></div></div></div>
+</div>
+
+<figure class="gb-block-image gb-block-image-d06a53d3"><img width="909" height="909" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20909%20909'%3E%3C/svg%3E" class="gb-image-d06a53d3" alt="Jasa Pembuatan Npwp Nganjuk" decoding="async" fetchpriority="high" data-lazy-srcset="https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-1024x1024.jpeg 1024w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-300x300.jpeg 300w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-150x150.jpeg 150w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-768x768.jpeg 768w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-1536x1536.jpeg 1536w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1.jpeg 2048w" data-lazy-sizes="(max-width: 909px) 100vw, 909px" title="Jasa Pembuatan Npwp Nganjuk" data-lazy-src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-1024x1024.jpeg" /><noscript><img width="909" height="909" src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-1024x1024.jpeg" class="gb-image-d06a53d3" alt="Jasa Pembuatan Npwp Nganjuk" decoding="async" fetchpriority="high" srcset="https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-1024x1024.jpeg 1024w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-300x300.jpeg 300w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-150x150.jpeg 150w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-768x768.jpeg 768w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-1536x1536.jpeg 1536w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1.jpeg 2048w" sizes="(max-width: 909px) 100vw, 909px" title="Jasa Pembuatan Npwp Nganjuk" /></noscript></figure>
+
+
+<h1 class="gb-headline gb-headline-927874de gb-headline-text">Jasa Pembuatan Npwp Nganjuk</h1>
+
+
+<div class="gb-container gb-container-ef66b08c">
+<p class="gb-headline gb-headline-1db58ca0 gb-headline-text"><time class="entry-date published" datetime="2024-11-15T00:00:53+00:00">November 15, 2024</time></p>
+
+
+
+<img alt='Photo of author' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2030%2030'%3E%3C/svg%3E" data-lazy-srcset='https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-building-permit-indonesia-q7lisahcb1g1aekpcg0za9mktr1cz6h1an9hzkk4t4-5-60x60.jpg 2x' class='avatar avatar-30 photo dynamic-author-image dynamic-author-image-rounded' height='30' width='30' decoding='async' data-lazy-src="https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-building-permit-indonesia-q7lisahcb1g1aekpcg0za9mktr1cz6h1an9hzkk4t4-5-30x30.jpg"/><noscript><img alt='Photo of author' src='https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-building-permit-indonesia-q7lisahcb1g1aekpcg0za9mktr1cz6h1an9hzkk4t4-5-30x30.jpg' srcset='https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-building-permit-indonesia-q7lisahcb1g1aekpcg0za9mktr1cz6h1an9hzkk4t4-5-60x60.jpg 2x' class='avatar avatar-30 photo dynamic-author-image dynamic-author-image-rounded' height='30' width='30' decoding='async'/></noscript>
+
+
+<p class="gb-headline gb-headline-e312a067 gb-headline-text">By Hendrawan, S.H.</p>
+
+</div>
+
+<div class="dynamic-entry-content"><p> <strong>Jasa Pembuatan NPWP Nganjuk</strong> &#8211; Membutuhkan NPWP untuk menjalankan bisnis di Nganjuk? Tak perlu khawatir! Anda dapat mempercayakan proses pembuatan NPWP kepada JANGKARGROUPS, jasa pembuatan NPWP yang terpercaya dan berpengalaman di Nganjuk.  Kami memahami bahwa proses pembuatan NPWP bisa menjadi rumit dan memakan waktu, oleh karena itu JANGKARGROUPS hadir untuk membantu Anda mengurusnya dengan mudah, cepat, dan tanpa perlu repot.</p>
+<p>Dengan tim profesional dan berpengalaman, JANGKARGROUPS siap membantu Anda dalam melengkapi persyaratan, mengisi formulir, dan mengajukan permohonan NPWP. Kami juga memberikan layanan konsultasi dan dukungan penuh selama proses pembuatan NPWP, sehingga Anda dapat merasa tenang dan yakin bahwa prosesnya berjalan lancar.</p>
+<div id="ez-toc-container" class="ez-toc-v2_0_87 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title" style="cursor:inherit"></p>
+<span class="ez-toc-title-toggle"><a href="#" class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle" aria-label="Toggle Table of Content"><span class="ez-toc-js-icon-con"><span class=""><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg" class="list-377408" width="20px" height="20px" viewBox="0 0 24 24" fill="none"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 24 24" version="1.2" baseProfile="tiny"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"/></svg></span></span></span></a></span></div>
+<nav><ul class='ez-toc-list ez-toc-list-level-1 ' ><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-1" href="#Mengapa_Membutuhkan_Jasa_Pembuatan_NPWP_di_Nganjuk">Mengapa Membutuhkan Jasa Pembuatan NPWP di Nganjuk?</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-2" href="#Syarat_dan_Prosedur_Pembuatan_NPWP_di_Nganjuk">Syarat dan Prosedur Pembuatan NPWP di Nganjuk</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-3" href="#Keunggulan_JANGKARGROUPS_untuk_Jasa_Pembuatan_NPWP_di_Nganjuk_Jasa_Pembuatan_NPWP_Nganjuk">Keunggulan JANGKARGROUPS untuk Jasa Pembuatan NPWP di Nganjuk: Jasa Pembuatan NPWP Nganjuk</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-4" href="#Biaya_dan_Estimasi_Waktu_Pembuatan_NPWP_di_JANGKARGROUPS">Biaya dan Estimasi Waktu Pembuatan NPWP di JANGKARGROUPS</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-5" href="#Layanan_Pembuatan_NPWP_JANGKARGROUPS">Layanan Pembuatan NPWP JANGKARGROUPS</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-6" href="#FAQ_Pembuatan_NPWP_di_Nganjuk">FAQ Pembuatan NPWP di Nganjuk</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-7" href="#Pertanyaan_yang_Sering_Diajukan">Pertanyaan yang Sering Diajukan</a></li></ul></nav></div>
+<h2><span class="ez-toc-section" id="Mengapa_Membutuhkan_Jasa_Pembuatan_NPWP_di_Nganjuk"></span>Mengapa Membutuhkan Jasa Pembuatan NPWP di Nganjuk?<span class="ez-toc-section-end"></span></h2>
+<p>Memiliki NPWP (Nomor Pokok Wajib Pajak) adalah hal yang sangat penting bagi setiap pengusaha dan calon investor di Nganjuk, khususnya bagi Anda yang ingin menjalankan bisnis dengan lancar dan terhindar dari masalah hukum.</p>
+<h3>Keuntungan Memiliki NPWP di Nganjuk</h3>
+<p>NPWP berperan sebagai identitas wajib pajak yang memudahkan Anda dalam menjalankan bisnis di Nganjuk. Berikut beberapa keuntungan memiliki NPWP:</p>
+<ul>
+<li><b>Memudahkan Transaksi Bisnis:</b> NPWP diperlukan untuk berbagai transaksi bisnis seperti membuka rekening bank, mengajukan kredit, dan melakukan transaksi jual beli.</li>
+<li><b>Mempermudah Pemenuhan Kewajiban Pajak:</b> NPWP memudahkan Anda dalam melaporkan dan membayar pajak, serta menghindari denda atau sanksi dari pajak.</li>
+<li><b>Meningkatkan Kepercayaan Mitra Bisnis:</b> NPWP menjadi bukti bahwa Anda adalah pengusaha yang taat pajak dan bertanggung jawab, sehingga dapat meningkatkan kepercayaan mitra bisnis.</li>
+<li><b>Mempermudah Akses ke Program Pemerintah:</b> NPWP diperlukan untuk mengakses program-program bantuan dan insentif dari pemerintah yang ditujukan untuk pengusaha.</li>
+</ul>
+<h3>Contoh Kasus Konkret</h3>
+<p>Misalnya, Pak Budi, seorang pengusaha di Nganjuk, ingin membuka rekening bank untuk menampung dana usaha. Bank mewajibkan Pak Budi untuk memiliki NPWP agar dapat membuka rekening. Dengan NPWP, Pak Budi dapat membuka rekening dan mempermudah pengelolaan keuangan usahanya.</p>
+<p>Berbisnis di Surakarta? Pastikan NPWP Anda sudah terurus dengan baik.  Untuk mendapatkan NPWP dengan mudah, Anda bisa memanfaatkan layanan <a href="https://pt.jangkargroups.co.id/jasa-pembuatan-npwp-surakarta" data-wpel-link="internal">Jasa Pembuatan NPWP Surakarta</a>.  Layanan ini membantu Anda mengurus NPWP dengan praktis dan profesional. </p>
+<h3>Mengapa Memilih JANGKARGROUPS?</h3>
+<p>JANGKARGROUPS adalah pilihan yang tepat untuk jasa pembuatan NPWP di Nganjuk karena:</p>
+<ul>
+<li><b>Proses Cepat dan Mudah:</b> JANGKARGROUPS membantu Anda mengurus NPWP dengan mudah dan cepat, tanpa perlu repot mengantri di kantor pajak.</li>
+<li><b>Layanan Terpercaya:</b> JANGKARGROUPS memiliki tim profesional yang berpengalaman dan terpercaya dalam mengurus NPWP.</li>
+<li><b>Harga Terjangkau:</b> JANGKARGROUPS menawarkan harga yang terjangkau dan transparan untuk jasa pembuatan NPWP.</li>
+<li><b>Keamanan Data Terjamin:</b> JANGKARGROUPS menjamin keamanan dan kerahasiaan data Anda selama proses pembuatan NPWP.</li>
+<li><b>Layanan Konsultasi:</b> JANGKARGROUPS memberikan layanan konsultasi dan dukungan penuh kepada Anda selama proses pembuatan NPWP.</li>
+</ul>
+<h3>Bagaimana JANGKARGROUPS Membantu?</h3>
+<p>JANGKARGROUPS membantu Anda dalam mengurus NPWP dengan mudah, cepat, dan terpercaya. Berikut beberapa hal yang dilakukan JANGKARGROUPS:</p>
+<ul>
+<li><b>Membantu Melengkapi Dokumen:</b> JANGKARGROUPS membantu Anda dalam melengkapi dokumen yang diperlukan untuk pembuatan NPWP.</li>
+<li><b>Memeriksa Kelengkapan Dokumen:</b> JANGKARGROUPS memeriksa kelengkapan dan keabsahan dokumen Anda sebelum diajukan ke kantor pajak.</li>
+<li><b>Mengajukan Permohonan NPWP:</b> JANGKARGROUPS mengajukan permohonan NPWP Anda ke kantor pajak.</li>
+<li><b>Melacak Status Permohonan:</b> JANGKARGROUPS melacak status permohonan NPWP Anda dan memberikan informasi kepada Anda.</li>
+<li><b>Menerima dan Mengantarkan NPWP:</b> JANGKARGROUPS menerima NPWP Anda dari kantor pajak dan mengantarkannya kepada Anda.</li>
+</ul>
+<div style="clear:both; margin-top:0em; margin-bottom:1em;"><a href="https://pt.jangkargroups.co.id/jasa-pembuatan-npwp-mappi" target="_self" rel="dofollow" class="ubc60fe316e5cd576d940deb38bcd482b" data-wpel-link="internal"><!-- INLINE RELATED POSTS 1/3 //--><style> .ubc60fe316e5cd576d940deb38bcd482b { padding:0px; margin: 0; padding-top:1em!important; padding-bottom:1em!important; width:100%; display: block; font-weight:bold; background-color:#FFFFFF; border:0!important; border-left:4px solid #FFFFFF!important; text-decoration:none; } .ubc60fe316e5cd576d940deb38bcd482b:active, .ubc60fe316e5cd576d940deb38bcd482b:hover { opacity: 1; transition: opacity 250ms; webkit-transition: opacity 250ms; text-decoration:none; } .ubc60fe316e5cd576d940deb38bcd482b { transition: background-color 250ms; webkit-transition: background-color 250ms; opacity: 1; transition: opacity 250ms; webkit-transition: opacity 250ms; } .ubc60fe316e5cd576d940deb38bcd482b .ctaText { font-weight:bold; color:#464646; text-decoration:none; font-size: 16px; } .ubc60fe316e5cd576d940deb38bcd482b .postTitle { color:#3498DB; text-decoration: underline!important; font-size: 16px; } .ubc60fe316e5cd576d940deb38bcd482b:hover .postTitle { text-decoration: underline!important; } </style><div style="padding-left:1em; padding-right:1em;"><span class="ctaText"></span>&nbsp; <span class="postTitle">Jasa Pembuatan Npwp Mappi</span></div></a></div><h3>Hindari Kesalahan dan Masalah</h3>
+<p>JANGKARGROUPS membantu Anda menghindari kesalahan dan masalah dalam proses pembuatan NPWP. Tim JANGKARGROUPS yang berpengalaman akan memastikan bahwa permohonan NPWP Anda diajukan dengan benar dan sesuai dengan prosedur.</p>
+<h2><span class="ez-toc-section" id="Syarat_dan_Prosedur_Pembuatan_NPWP_di_Nganjuk"></span>Syarat dan Prosedur Pembuatan NPWP di Nganjuk<span class="ez-toc-section-end"></span></h2>
+<h3>Dasar Hukum</h3>
+<p>Pembuatan NPWP di Nganjuk diatur dalam Undang-Undang Nomor 28 Tahun 2007 tentang Ketentuan Umum dan Tata Cara Perpajakan.</p>
+<h3>Syarat dan Dokumen</h3>
+<p>Berikut syarat dan dokumen yang dibutuhkan untuk membuat NPWP di Nganjuk:</p>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Syarat</th>
+<th>Dokumen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Warga Negara Indonesia (WNI)</td>
+<td>KTP</td>
+</tr>
+<tr>
+<td>2</td>
+<td>WNI yang berdomisili di Nganjuk</td>
+<td>Kartu Keluarga</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Memiliki usaha atau pekerjaan</td>
+<td>Surat Keterangan Usaha/Surat Keterangan Kerja</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Memiliki Nomor Induk Kependudukan (NIK)</td>
+<td>KTP</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Memiliki alamat yang jelas</td>
+<td>KTP atau Surat Keterangan Domisili</td>
+</tr>
+</tbody>
+</table>
+<h3>Prosedur Pembuatan NPWP</h3>
+<p>Berikut langkah-langkah prosedur pembuatan NPWP di Nganjuk:</p>
+<ol>
+<li><b>Melengkapi Formulir Pendaftaran:</b> Anda dapat mengunduh formulir pendaftaran NPWP di website resmi Direktorat Jenderal Pajak (DJP) atau mendapatkannya di kantor pajak terdekat.</li>
+<li><b>Melengkapi Dokumen Persyaratan:</b> Siapkan dokumen persyaratan yang dibutuhkan sesuai dengan jenis NPWP yang Anda ajukan.</li>
+<li><b>Menyerahkan Formulir dan Dokumen:</b> Serahkan formulir pendaftaran NPWP dan dokumen persyaratan ke kantor pajak terdekat.</li>
+<li><b>Verifikasi Data:</b> Petugas pajak akan memverifikasi data yang Anda ajukan.</li>
+<li><b>Penerbitan NPWP:</b> Jika data Anda sudah diverifikasi dan dinyatakan lengkap, kantor pajak akan menerbitkan NPWP Anda.</li>
+<li><b>Pengambilan NPWP:</b> Anda dapat mengambil NPWP Anda di kantor pajak tempat Anda mengajukan permohonan.</li>
+</ol>
+<h3>Contoh Cara Mengisi Formulir NPWP</h3>
+<p>Berikut contoh cara mengisi formulir NPWP dengan benar:</p>
+<ul>
+<li><b>Isilah data pribadi Anda dengan lengkap dan benar</b>, seperti nama lengkap, NIK, alamat, dan nomor telepon.</li>
+<li><b>Pilih jenis NPWP yang Anda ajukan</b>, apakah untuk pribadi, badan, atau perorangan.</li>
+<li><b>Isilah data usaha atau pekerjaan Anda dengan lengkap dan benar</b>, seperti nama usaha, jenis usaha, alamat usaha, dan nomor telepon usaha.</li>
+<li><b>Pastikan semua data yang Anda isi sudah benar</b> sebelum Anda menyerahkan formulir ke kantor pajak.</li>
+</ul>
+<h3>Peran JANGKARGROUPS dalam Mempermudah Proses</h3>
+<p>JANGKARGROUPS membantu Anda dalam mempermudah proses pembuatan NPWP di Nganjuk dengan layanan yang cepat, tepat, dan profesional. JANGKARGROUPS membantu Anda dalam:</p>
+<ul>
+<li><b>Melengkapi Formulir dan Dokumen:</b> JANGKARGROUPS membantu Anda dalam melengkapi formulir pendaftaran NPWP dan dokumen persyaratan.</li>
+<li><b>Mengajukan Permohonan:</b> JANGKARGROUPS mengajukan permohonan NPWP Anda ke kantor pajak.</li>
+<li><b>Melacak Status Permohonan:</b> JANGKARGROUPS melacak status permohonan NPWP Anda dan memberikan informasi kepada Anda.</li>
+<li><b>Menerima dan Mengantarkan NPWP:</b> JANGKARGROUPS menerima NPWP Anda dari kantor pajak dan mengantarkannya kepada Anda.</li>
+</ul>
+<h2><span class="ez-toc-section" id="Keunggulan_JANGKARGROUPS_untuk_Jasa_Pembuatan_NPWP_di_Nganjuk_Jasa_Pembuatan_NPWP_Nganjuk"></span>Keunggulan JANGKARGROUPS untuk Jasa Pembuatan NPWP di Nganjuk: Jasa Pembuatan NPWP Nganjuk<span class="ez-toc-section-end"></span></h2>
+<h3>Keunggulan JANGKARGROUPS</h3>
+<p>JANGKARGROUPS memiliki beberapa keunggulan dibandingkan dengan kompetitor dalam menyediakan jasa pembuatan NPWP di Nganjuk:</p>
+<ul>
+<li><b>Tim Profesional dan Berpengalaman:</b> JANGKARGROUPS memiliki tim profesional yang berpengalaman dan ahli dalam mengurus NPWP.</li>
+<li><b>Proses Cepat dan Efisien:</b> JANGKARGROUPS membantu Anda dalam menyelesaikan proses pembuatan NPWP dengan cepat dan efisien.</li>
+<li><b>Harga Terjangkau dan Transparan:</b> JANGKARGROUPS menawarkan harga yang terjangkau dan transparan untuk jasa pembuatan NPWP.</li>
+<li><b>Layanan Konsultasi dan Dukungan:</b> JANGKARGROUPS memberikan layanan konsultasi dan dukungan penuh kepada Anda selama proses pembuatan NPWP.</li>
+<li><b>Keamanan Data Terjamin:</b> JANGKARGROUPS menjamin keamanan dan kerahasiaan data Anda selama proses pembuatan NPWP.</li>
+<li><b>Solusi Praktis dan Efisien:</b> JANGKARGROUPS menawarkan solusi yang praktis dan efisien untuk pembuatan NPWP.</li>
+</ul>
+<div style="clear:both; margin-top:0em; margin-bottom:1em;"><a href="https://pt.jangkargroups.co.id/jasa-pembuatan-npwp-aceh-tengah" target="_self" rel="dofollow" class="u71fa77710d23f249f827a37e6e55ee0d" data-wpel-link="internal"><!-- INLINE RELATED POSTS 2/3 //--><style> .u71fa77710d23f249f827a37e6e55ee0d { padding:0px; margin: 0; padding-top:1em!important; padding-bottom:1em!important; width:100%; display: block; font-weight:bold; background-color:#FFFFFF; border:0!important; border-left:4px solid #FFFFFF!important; text-decoration:none; } .u71fa77710d23f249f827a37e6e55ee0d:active, .u71fa77710d23f249f827a37e6e55ee0d:hover { opacity: 1; transition: opacity 250ms; webkit-transition: opacity 250ms; text-decoration:none; } .u71fa77710d23f249f827a37e6e55ee0d { transition: background-color 250ms; webkit-transition: background-color 250ms; opacity: 1; transition: opacity 250ms; webkit-transition: opacity 250ms; } .u71fa77710d23f249f827a37e6e55ee0d .ctaText { font-weight:bold; color:#464646; text-decoration:none; font-size: 16px; } .u71fa77710d23f249f827a37e6e55ee0d .postTitle { color:#3498DB; text-decoration: underline!important; font-size: 16px; } .u71fa77710d23f249f827a37e6e55ee0d:hover .postTitle { text-decoration: underline!important; } </style><div style="padding-left:1em; padding-right:1em;"><span class="ctaText"></span>&nbsp; <span class="postTitle">Jasa Pembuatan Npwp Aceh Tengah</span></div></a></div><h3>Bukti Keunggulan JANGKARGROUPS</h3>
+<p>Berikut bukti konkret tentang keunggulan JANGKARGROUPS:</p>
+<ul>
+<li><b>Testimoni Klien:</b> JANGKARGROUPS telah mendapatkan banyak testimoni positif dari klien yang puas dengan layanan yang diberikan.</li>
+<li><b>Sertifikasi dan Penghargaan:</b> JANGKARGROUPS telah mendapatkan sertifikasi dan penghargaan atas kualitas layanan yang diberikan.</li>
+</ul>
+<h3>Jaminan Keamanan dan Kerahasiaan Data</h3>
+<p>JANGKARGROUPS menjamin keamanan dan kerahasiaan data Anda selama proses pembuatan NPWP. JANGKARGROUPS menggunakan sistem keamanan yang canggih untuk melindungi data Anda dari akses yang tidak sah.</p>
+<h3>Layanan Konsultasi dan Dukungan Penuh</h3>
+<p>JANGKARGROUPS memberikan layanan konsultasi dan dukungan penuh kepada Anda selama proses pembuatan NPWP. Anda dapat menghubungi tim JANGKARGROUPS kapan saja untuk mendapatkan informasi dan bantuan.</p>
+<p>Ingin mengembangkan bisnis di Kediri? Pastikan Anda memiliki NPWP.  Untuk kemudahan dalam pengurusan NPWP, Anda bisa memanfaatkan layanan <a href="https://pt.jangkargroups.co.id/jasa-pembuatan-npwp-kediri" data-wpel-link="internal">Jasa Pembuatan NPWP Kediri</a>. Layanan ini membantu Anda mengurus NPWP dengan praktis dan efisien. </p>
+<h3>Solusi Praktis dan Efisien</h3>
+<p>JANGKARGROUPS menawarkan solusi yang praktis dan efisien untuk pembuatan NPWP. JANGKARGROUPS membantu Anda dalam menyelesaikan proses pembuatan NPWP dengan mudah dan cepat, tanpa perlu repot mengantri di kantor pajak.</p>
+<h2><span class="ez-toc-section" id="Biaya_dan_Estimasi_Waktu_Pembuatan_NPWP_di_JANGKARGROUPS"></span>Biaya dan Estimasi Waktu Pembuatan NPWP di JANGKARGROUPS<span class="ez-toc-section-end"></span></h2>
+<h3>Paket Layanan dan Harga</h3>
+<p>Berikut paket layanan dan harga untuk pembuatan NPWP di JANGKARGROUPS:</p>
+<table>
+<thead>
+<tr>
+<th>Paket</th>
+<th>Harga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paket Standar</td>
+<td>Rp 150.000</td>
+</tr>
+<tr>
+<td>Paket Premium</td>
+<td>Rp 250.000</td>
+</tr>
+</tbody>
+</table>
+<h3>Faktor yang Mempengaruhi Biaya</h3>
+<p>Beberapa faktor yang dapat mempengaruhi biaya pembuatan NPWP di JANGKARGROUPS, antara lain:</p>
+<ul>
+<li><b>Jenis NPWP:</b> Biaya pembuatan NPWP untuk pribadi, badan, atau perorangan bisa berbeda.</li>
+<li><b>Tingkat Kesulitan:</b> Biaya pembuatan NPWP bisa berbeda tergantung tingkat kesulitan dalam melengkapi dokumen dan mengajukan permohonan.</li>
+<li><b>Layanan Tambahan:</b> Biaya pembuatan NPWP bisa berbeda jika Anda memilih layanan tambahan seperti konsultasi pajak atau pengurusan izin usaha.</li>
+</ul>
+<h3>Estimasi Waktu Pembuatan NPWP</h3>
+<p>Estimasi waktu yang dibutuhkan untuk proses pembuatan NPWP di JANGKARGROUPS adalah 3-5 hari kerja.</p>
+<h3>Promo dan Diskon</h3>
+<p>JANGKARGROUPS menawarkan promo dan diskon untuk pembuatan NPWP di Nganjuk. Silakan hubungi tim JANGKARGROUPS untuk informasi lebih lanjut tentang promo dan diskon yang tersedia.</p>
+<p>Menjalankan usaha di Salatiga dan membutuhkan NPWP?  Tak perlu repot mengurusnya sendiri, <a href="https://pt.jangkargroups.co.id/jasa-pembuatan-npwp-salatiga" data-wpel-link="internal">Jasa Pembuatan NPWP Salatiga</a> hadir untuk membantu Anda mendapatkan NPWP dengan mudah dan cepat.  Fokuslah pada pengembangan bisnis Anda, biarkan kami mengurus NPWP Anda. </p>
+<h3>Transparansi Biaya dan Estimasi Waktu</h3>
+<p>JANGKARGROUPS memberikan transparansi biaya dan estimasi waktu yang jelas kepada klien. Anda akan mendapatkan informasi yang lengkap dan terpercaya tentang biaya dan waktu yang dibutuhkan untuk pembuatan NPWP.</p>
+<h2><span class="ez-toc-section" id="Layanan_Pembuatan_NPWP_JANGKARGROUPS"></span>Layanan Pembuatan NPWP JANGKARGROUPS<span class="ez-toc-section-end"></span></h2>
+<p><img alt="Jasa Pembuatan Npwp Nganjuk" title="Jasa Pembuatan Npwp Nganjuk" decoding="async" class="aligncenter size-full wp-image-39033" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20393'%3E%3C/svg%3E" width="700" height="393" data-lazy-src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1.jpeg" /><noscript><img alt="Jasa Pembuatan Npwp Nganjuk" title="Jasa Pembuatan Npwp Nganjuk" decoding="async" class="aligncenter size-full wp-image-39033" src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1.jpeg" width="700" height="393" /></noscript></p>
+<h3>Tahapan Layanan</h3>
+<p>Berikut tahapan layanan yang diberikan JANGKARGROUPS untuk pembuatan NPWP di Nganjuk:</p>
+<ol>
+<li><b>Konsultasi:</b> Anda dapat menghubungi tim JANGKARGROUPS untuk berkonsultasi tentang proses pembuatan NPWP.</li>
+<li><b>Pengumpulan Data:</b> JANGKARGROUPS akan membantu Anda dalam mengumpulkan data dan dokumen yang diperlukan untuk pembuatan NPWP.</li>
+<li><b>Pembuatan Formulir:</b> JANGKARGROUPS akan membantu Anda dalam mengisi formulir pendaftaran NPWP dengan benar.</li>
+<li><b>Verifikasi Dokumen:</b> JANGKARGROUPS akan memverifikasi kelengkapan dan keabsahan dokumen Anda.</li>
+<li><b>Pengajuan Permohonan:</b> JANGKARGROUPS akan mengajukan permohonan NPWP Anda ke kantor pajak.</li>
+<li><b>Pelacakan Status:</b> JANGKARGROUPS akan melacak status permohonan NPWP Anda dan memberikan informasi kepada Anda.</li>
+<li><b>Penerimaan NPWP:</b> JANGKARGROUPS akan menerima NPWP Anda dari kantor pajak.</li>
+<li><b>Pengiriman NPWP:</b> JANGKARGROUPS akan mengirimkan NPWP Anda kepada Anda.</li>
+</ol>
+<div style="clear:both; margin-top:0em; margin-bottom:1em;"><a href="https://pt.jangkargroups.co.id/jasa-pembuatan-npwp-pidie" target="_self" rel="dofollow" class="u2af529986ccb62b1a82693aa47f094b7" data-wpel-link="internal"><!-- INLINE RELATED POSTS 3/3 //--><style> .u2af529986ccb62b1a82693aa47f094b7 { padding:0px; margin: 0; padding-top:1em!important; padding-bottom:1em!important; width:100%; display: block; font-weight:bold; background-color:#FFFFFF; border:0!important; border-left:4px solid #FFFFFF!important; text-decoration:none; } .u2af529986ccb62b1a82693aa47f094b7:active, .u2af529986ccb62b1a82693aa47f094b7:hover { opacity: 1; transition: opacity 250ms; webkit-transition: opacity 250ms; text-decoration:none; } .u2af529986ccb62b1a82693aa47f094b7 { transition: background-color 250ms; webkit-transition: background-color 250ms; opacity: 1; transition: opacity 250ms; webkit-transition: opacity 250ms; } .u2af529986ccb62b1a82693aa47f094b7 .ctaText { font-weight:bold; color:#464646; text-decoration:none; font-size: 16px; } .u2af529986ccb62b1a82693aa47f094b7 .postTitle { color:#3498DB; text-decoration: underline!important; font-size: 16px; } .u2af529986ccb62b1a82693aa47f094b7:hover .postTitle { text-decoration: underline!important; } </style><div style="padding-left:1em; padding-right:1em;"><span class="ctaText"></span>&nbsp; <span class="postTitle">Jasa Pembuatan Npwp Pidie</span></div></a></div><h3>Detail Tahapan Layanan, Jasa Pembuatan NPWP Nganjuk</h3>
+<p><img alt="Jasa Pembuatan Npwp Nganjuk" title="Jasa Pembuatan Npwp Nganjuk" decoding="async" class="aligncenter size-full wp-image-39035" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20525'%3E%3C/svg%3E" width="700" height="525" data-lazy-src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1.jpeg" /><noscript><img alt="Jasa Pembuatan Npwp Nganjuk" title="Jasa Pembuatan Npwp Nganjuk" decoding="async" class="aligncenter size-full wp-image-39035" src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1.jpeg" width="700" height="525" /></noscript></p>
+<p>Setiap tahapan layanan JANGKARGROUPS dijalankan dengan lancar dan sesuai dengan prosedur. Tim JANGKARGROUPS yang berpengalaman akan memastikan bahwa proses pembuatan NPWP Anda berjalan dengan lancar dan sesuai dengan ketentuan.</p>
+<p>Butuh NPWP untuk usaha di Tegal? Tenang, urusan pembuatan NPWP bisa diurus dengan mudah dan cepat melalui <a href="https://pt.jangkargroups.co.id/jasa-pembuatan-npwp-tegal" data-wpel-link="internal">Jasa Pembuatan NPWP Tegal</a>.  Mereka siap membantu Anda dalam proses pengurusan, sehingga Anda bisa fokus mengembangkan bisnis. </p>
+<h3>Informasi dan Update</h3>
+<p>JANGKARGROUPS memberikan informasi dan update kepada Anda selama proses pembuatan NPWP. Anda akan mendapatkan informasi tentang status permohonan NPWP Anda dan perkembangan prosesnya.</p>
+<h3>Kepuasan Klien</h3>
+<p>JANGKARGROUPS berkomitmen untuk memberikan kepuasan kepada klien setelah proses pembuatan NPWP selesai. JANGKARGROUPS akan memastikan bahwa Anda mendapatkan NPWP dengan mudah, cepat, dan tepat waktu.</p>
+<h2><span class="ez-toc-section" id="FAQ_Pembuatan_NPWP_di_Nganjuk"></span>FAQ Pembuatan NPWP di Nganjuk<span class="ez-toc-section-end"></span></h2>
+<h3>Pertanyaan yang Sering Diajukan</h3>
+<table>
+<thead>
+<tr>
+<th>Pertanyaan</th>
+<th>Jawaban</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apa saja syarat yang dibutuhkan untuk membuat NPWP?</td>
+<td>Syarat yang dibutuhkan untuk membuat NPWP di Nganjuk adalah Warga Negara Indonesia (WNI), WNI yang berdomisili di Nganjuk, memiliki usaha atau pekerjaan, memiliki Nomor Induk Kependudukan (NIK), dan memiliki alamat yang jelas.</td>
+</tr>
+<tr>
+<td>Bagaimana cara mengisi formulir NPWP dengan benar?</td>
+<td>Anda dapat mengunduh formulir pendaftaran NPWP di website resmi Direktorat Jenderal Pajak (DJP) atau mendapatkannya di kantor pajak terdekat. Isilah data pribadi Anda dengan lengkap dan benar, seperti nama lengkap, NIK, alamat, dan nomor telepon. Pilih jenis NPWP yang Anda ajukan, apakah untuk pribadi, badan, atau perorangan. Isilah data usaha atau pekerjaan Anda dengan lengkap dan benar, seperti nama usaha, jenis usaha, alamat usaha, dan nomor telepon usaha. Pastikan semua data yang Anda isi sudah benar sebelum Anda menyerahkan formulir ke kantor pajak.</td>
+</tr>
+<tr>
+<td>Berapa lama waktu yang dibutuhkan untuk membuat NPWP?</td>
+<td>Estimasi waktu yang dibutuhkan untuk proses pembuatan NPWP di JANGKARGROUPS adalah 3-5 hari kerja.</td>
+</tr>
+<tr>
+<td>Berapa biaya pembuatan NPWP di JANGKARGROUPS?</td>
+<td>JANGKARGROUPS menawarkan paket layanan dengan harga yang terjangkau dan transparan. Paket Standar dibanderol dengan harga Rp 150.000 dan Paket Premium dibanderol dengan harga Rp 250.000.</td>
+</tr>
+<tr>
+<td>Bagaimana cara menghubungi JANGKARGROUPS untuk konsultasi?</td>
+<td>Anda dapat menghubungi tim JANGKARGROUPS melalui nomor telepon, email, atau website.</td>
+</tr>
+</tbody>
+</table>
+<h2><span class="ez-toc-section" id="Pertanyaan_yang_Sering_Diajukan"></span>Pertanyaan yang Sering Diajukan<span class="ez-toc-section-end"></span></h2>
+<p><strong>Apakah JANGKARGROUPS melayani pembuatan NPWP untuk WNA?</strong></p>
+<p>Ya, JANGKARGROUPS melayani pembuatan NPWP untuk WNA. Silahkan hubungi kami untuk informasi lebih lanjut.</p>
+<p><strong>Berapa lama waktu yang dibutuhkan untuk proses pembuatan NPWP?</strong></p>
+<p>Memulai bisnis di Cilegon dan butuh NPWP? Tak perlu khawatir, <a href="https://pt.jangkargroups.co.id/jasa-pembuatan-npwp-cilegon" data-wpel-link="internal">Jasa Pembuatan NPWP Cilegon</a> siap membantu Anda mendapatkan NPWP dengan cepat dan mudah. Layanan ini memudahkan Anda untuk fokus mengembangkan usaha di Cilegon. </p>
+<p>Waktu yang dibutuhkan untuk proses pembuatan NPWP bervariasi tergantung dari kelengkapan dokumen dan proses verifikasi. Namun, JANGKARGROUPS berkomitmen untuk menyelesaikan proses pembuatan NPWP secepat mungkin.</p>
+<p><strong>Apakah JANGKARGROUPS menyediakan layanan antar jemput dokumen?</strong></p>
+<p>Ya, JANGKARGROUPS menyediakan layanan antar jemput dokumen untuk wilayah Nganjuk. Silahkan hubungi kami untuk informasi lebih lanjut.</p>
+</div></div></article><section class="gb-container gb-container-8b4a8489">
+<div class="gb-container gb-container-ec0bcb55">
+
+<a class="gb-button gb-button-a3aaad4c" href="https://pt.jangkargroups.co.id/jasa-pembuatan-nib-jombang" data-wpel-link="internal"><span class="gb-icon"><svg aria-hidden="true" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></span></a>
+
+
+<div class="gb-container gb-container-4138dd74 gb-has-dynamic-bg" style="--background-url:url(https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1-768x768.jpeg)"></div>
+
+
+<h2 class="gb-headline gb-headline-2acc62a4 gb-headline-text"><a href="https://pt.jangkargroups.co.id/jasa-pembuatan-nib-jombang" data-wpel-link="internal">Jasa Pembuatan Nib Jombang</a></h2>
+
+</div>
+
+<div class="gb-container gb-container-a410a475">
+
+<h2 class="gb-headline gb-headline-9d97a37f gb-headline-text"><a href="https://pt.jangkargroups.co.id/perorangan-kepulauan-seribu-utara" data-wpel-link="internal">Jasa Pendirian PT Perorangan Kepulauan Seribu Utara</a></h2>
+
+
+<div class="gb-container gb-container-18430adf gb-has-dynamic-bg" style="--background-url:url(https://pt.jangkargroups.co.id/wp-content/uploads/2026/01/Jasa-Pendirian-PT-1-1.jpeg)"></div>
+
+
+<a class="gb-button gb-button-139d60e4" href="https://pt.jangkargroups.co.id/perorangan-kepulauan-seribu-utara" data-wpel-link="internal"><span class="gb-icon"><svg aria-hidden="true" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span></a>
+
+</div>
+</section>		</main>
+	</div>
+
+	<div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+	<div class="inside-right-sidebar">
+		<aside class="gb-container gb-container-11ff08cb">
+<section class="gb-container gb-container-acf59eb7">
+<img alt='Photo of author' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" data-lazy-srcset='https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-building-permit-indonesia-q7lisahcb1g1aekpcg0za9mktr1cz6h1an9hzkk4t4-5-200x200.jpg 2x' class='avatar avatar-100 photo dynamic-author-image dynamic-author-image-rounded' height='100' width='100' decoding='async' data-lazy-src="https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-building-permit-indonesia-q7lisahcb1g1aekpcg0za9mktr1cz6h1an9hzkk4t4-5-100x100.jpg"/><noscript><img alt='Photo of author' src='https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-building-permit-indonesia-q7lisahcb1g1aekpcg0za9mktr1cz6h1an9hzkk4t4-5-100x100.jpg' srcset='https://pt.jangkargroups.co.id/wp-content/uploads/2024/10/cropped-building-permit-indonesia-q7lisahcb1g1aekpcg0za9mktr1cz6h1an9hzkk4t4-5-200x200.jpg 2x' class='avatar avatar-100 photo dynamic-author-image dynamic-author-image-rounded' height='100' width='100' decoding='async'/></noscript>
+
+
+<h2 class="gb-headline gb-headline-673c28c2 gb-headline-text">Hendrawan, S.H.</h2>
+
+
+
+<p class="gb-headline gb-headline-334d71fb gb-headline-text"><em>About the author</em></p>
+
+
+<div class="gb-container gb-container-fbedb304">
+<div class="dynamic-author-description">Berpengalaman dalam menangani proses pendirian PT dan akta perusahaan.</div>
+</div>
+
+<div class="gb-container gb-container-174f6256">
+
+<a class="gb-button gb-button-800b67cf" href="#"><span class="gb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" fill="currentColor"></path></svg></span></a>
+
+
+
+<a class="gb-button gb-button-f7f618b7" href="#"><span class="gb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" aria-hidden="true"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor"></path></svg></span></a>
+
+</div>
+</section>
+
+<section class="gb-container gb-container-13f40ef8">
+
+<h2 class="gb-headline gb-headline-c5d0f533 gb-headline-text">Categories</h2>
+
+
+<ul class="wp-block-categories-list wp-block-categories-taxonomy-category wp-block-categories">	<li class="cat-item cat-item-1"><a href="https://pt.jangkargroups.co.id/category/bandung" data-wpel-link="internal">Bandung</a> (2,973)
+</li>
+	<li class="cat-item cat-item-4170"><a href="https://pt.jangkargroups.co.id/category/bekasi" data-wpel-link="internal">Bekasi</a> (217)
+</li>
+	<li class="cat-item cat-item-4169"><a href="https://pt.jangkargroups.co.id/category/bogor" data-wpel-link="internal">Bogor</a> (98)
+</li>
+	<li class="cat-item cat-item-4181"><a href="https://pt.jangkargroups.co.id/category/cianjur" data-wpel-link="internal">Cianjur</a> (27)
+</li>
+	<li class="cat-item cat-item-1813"><a href="https://pt.jangkargroups.co.id/category/cimahi" data-wpel-link="internal">Cimahi</a> (629)
+</li>
+	<li class="cat-item cat-item-4174"><a href="https://pt.jangkargroups.co.id/category/cirebon" data-wpel-link="internal">Cirebon</a> (322)
+</li>
+	<li class="cat-item cat-item-4171"><a href="https://pt.jangkargroups.co.id/category/depok" data-wpel-link="internal">Depok</a> (104)
+</li>
+	<li class="cat-item cat-item-11271"><a href="https://pt.jangkargroups.co.id/category/faq" data-wpel-link="internal">FAQ</a> (1,254)
+</li>
+	<li class="cat-item cat-item-4175"><a href="https://pt.jangkargroups.co.id/category/garut" data-wpel-link="internal">Garut</a> (23)
+</li>
+	<li class="cat-item cat-item-4180"><a href="https://pt.jangkargroups.co.id/category/indramayu" data-wpel-link="internal">Indramayu</a> (255)
+</li>
+	<li class="cat-item cat-item-319"><a href="https://pt.jangkargroups.co.id/category/jakarta" data-wpel-link="internal">Jakarta</a> (1,481)
+</li>
+	<li class="cat-item cat-item-4172"><a href="https://pt.jangkargroups.co.id/category/karawang" data-wpel-link="internal">Karawang</a> (272)
+</li>
+	<li class="cat-item cat-item-9787"><a href="https://pt.jangkargroups.co.id/category/koperasi" data-wpel-link="internal">Koperasi</a> (347)
+</li>
+	<li class="cat-item cat-item-4182"><a href="https://pt.jangkargroups.co.id/category/kuningan" data-wpel-link="internal">Kuningan</a> (17)
+</li>
+	<li class="cat-item cat-item-9701"><a href="https://pt.jangkargroups.co.id/category/nib" data-wpel-link="internal">NIB</a> (351)
+</li>
+	<li class="cat-item cat-item-9710"><a href="https://pt.jangkargroups.co.id/category/npwp" data-wpel-link="internal">NPWP</a> (350)
+</li>
+	<li class="cat-item cat-item-3455"><a href="https://pt.jangkargroups.co.id/category/pma" data-wpel-link="internal">PMA</a> (512)
+</li>
+	<li class="cat-item cat-item-1130"><a href="https://pt.jangkargroups.co.id/category/pt" data-wpel-link="internal">PT</a> (483)
+</li>
+	<li class="cat-item cat-item-4179"><a href="https://pt.jangkargroups.co.id/category/purwakarta" data-wpel-link="internal">Purwakarta</a> (169)
+</li>
+	<li class="cat-item cat-item-13503"><a href="https://pt.jangkargroups.co.id/category/rups" data-wpel-link="internal">RUPS</a> (46)
+</li>
+	<li class="cat-item cat-item-4178"><a href="https://pt.jangkargroups.co.id/category/subang" data-wpel-link="internal">Subang</a> (53)
+</li>
+	<li class="cat-item cat-item-4176"><a href="https://pt.jangkargroups.co.id/category/sukabumi" data-wpel-link="internal">Sukabumi</a> (172)
+</li>
+	<li class="cat-item cat-item-4173"><a href="https://pt.jangkargroups.co.id/category/tangerang" data-wpel-link="internal">Tangerang</a> (331)
+</li>
+	<li class="cat-item cat-item-4177"><a href="https://pt.jangkargroups.co.id/category/tasikmalaya" data-wpel-link="internal">Tasikmalaya</a> (294)
+</li>
+</ul>
+</section>
+
+<section class="gb-container gb-container-c3b5efd0">
+
+<h2 class="gb-headline gb-headline-b7e2af5f gb-headline-text">Latest posts</h2>
+
+
+
+<div class="gb-grid-wrapper gb-grid-wrapper-bffd2ef6 gb-query-loop-wrapper">
+<div class="gb-grid-column gb-grid-column-c72fdb43 gb-query-loop-item post-54349 post type-post status-publish format-standard has-post-thumbnail hentry category-rups"><article class="gb-container gb-container-c72fdb43">
+<div class="gb-container gb-container-7b8bbe81">
+<figure class="gb-block-image gb-block-image-14f4d6b9"><a href="https://pt.jangkargroups.co.id/jasa-pembuatan-akta-rupslb" data-wpel-link="internal"><img width="818" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20818%201024'%3E%3C/svg%3E" class="gb-image-14f4d6b9" alt="Jasa Pembuatan Akta RUPSLB" decoding="async" data-lazy-srcset="https://pt.jangkargroups.co.id/wp-content/uploads/2026/09/1712346869736-818x1024.jpg 818w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/09/1712346869736-240x300.jpg 240w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/09/1712346869736-768x962.jpg 768w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/09/1712346869736.jpg 920w" data-lazy-sizes="(max-width: 818px) 100vw, 818px" title="Jasa Pembuatan Akta RUPSLB" data-lazy-src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/09/1712346869736-818x1024.jpg" /><noscript><img width="818" height="1024" src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/09/1712346869736-818x1024.jpg" class="gb-image-14f4d6b9" alt="Jasa Pembuatan Akta RUPSLB" decoding="async" srcset="https://pt.jangkargroups.co.id/wp-content/uploads/2026/09/1712346869736-818x1024.jpg 818w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/09/1712346869736-240x300.jpg 240w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/09/1712346869736-768x962.jpg 768w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/09/1712346869736.jpg 920w" sizes="(max-width: 818px) 100vw, 818px" title="Jasa Pembuatan Akta RUPSLB" /></noscript></a></figure>
+</div>
+
+<div class="gb-container gb-container-75c218c2">
+<h3 class="gb-headline gb-headline-5f76df96 gb-headline-text"><a href="https://pt.jangkargroups.co.id/jasa-pembuatan-akta-rupslb" data-wpel-link="internal">Jasa Pembuatan Akta RUPSLB</a></h3>
+
+<p class="gb-headline gb-headline-134db106 gb-headline-text"><time class="entry-date published" datetime="2026-09-01T12:27:14+00:00">September 1, 2026</time></p>
+</div>
+</article></div>
+
+<div class="gb-grid-column gb-grid-column-c72fdb43 gb-query-loop-item post-54345 post type-post status-publish format-standard has-post-thumbnail hentry category-rups"><article class="gb-container gb-container-c72fdb43">
+<div class="gb-container gb-container-7b8bbe81">
+<figure class="gb-block-image gb-block-image-14f4d6b9"><a href="https://pt.jangkargroups.co.id/jasa-pembuatan-akta-rups" data-wpel-link="internal"><img width="818" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20818%201024'%3E%3C/svg%3E" class="gb-image-14f4d6b9" alt="Jasa Pembuatan Akta RUPS" decoding="async" data-lazy-srcset="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344660616-818x1024.jpg 818w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344660616-240x300.jpg 240w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344660616-768x962.jpg 768w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344660616.jpg 920w" data-lazy-sizes="(max-width: 818px) 100vw, 818px" title="Jasa Pembuatan Akta RUPS" data-lazy-src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344660616-818x1024.jpg" /><noscript><img width="818" height="1024" src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344660616-818x1024.jpg" class="gb-image-14f4d6b9" alt="Jasa Pembuatan Akta RUPS" decoding="async" srcset="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344660616-818x1024.jpg 818w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344660616-240x300.jpg 240w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344660616-768x962.jpg 768w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344660616.jpg 920w" sizes="(max-width: 818px) 100vw, 818px" title="Jasa Pembuatan Akta RUPS" /></noscript></a></figure>
+</div>
+
+<div class="gb-container gb-container-75c218c2">
+<h3 class="gb-headline gb-headline-5f76df96 gb-headline-text"><a href="https://pt.jangkargroups.co.id/jasa-pembuatan-akta-rups" data-wpel-link="internal">Jasa Pembuatan Akta RUPS</a></h3>
+
+<p class="gb-headline gb-headline-134db106 gb-headline-text"><time class="entry-date published" datetime="2026-09-01T12:24:10+00:00">September 1, 2026</time></p>
+</div>
+</article></div>
+
+<div class="gb-grid-column gb-grid-column-c72fdb43 gb-query-loop-item post-54342 post type-post status-publish format-standard has-post-thumbnail hentry category-rups"><article class="gb-container gb-container-c72fdb43">
+<div class="gb-container gb-container-7b8bbe81">
+<figure class="gb-block-image gb-block-image-14f4d6b9"><a href="https://pt.jangkargroups.co.id/layanan-notaris-rups-tahunan" data-wpel-link="internal"><img width="818" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20818%201024'%3E%3C/svg%3E" class="gb-image-14f4d6b9" alt="Layanan Notaris RUPS Tahunan" decoding="async" data-lazy-srcset="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712346586490-818x1024.jpg 818w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712346586490-240x300.jpg 240w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712346586490-768x962.jpg 768w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712346586490.jpg 920w" data-lazy-sizes="(max-width: 818px) 100vw, 818px" title="Layanan Notaris RUPS Tahunan" data-lazy-src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712346586490-818x1024.jpg" /><noscript><img width="818" height="1024" src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712346586490-818x1024.jpg" class="gb-image-14f4d6b9" alt="Layanan Notaris RUPS Tahunan" decoding="async" srcset="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712346586490-818x1024.jpg 818w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712346586490-240x300.jpg 240w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712346586490-768x962.jpg 768w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712346586490.jpg 920w" sizes="(max-width: 818px) 100vw, 818px" title="Layanan Notaris RUPS Tahunan" /></noscript></a></figure>
+</div>
+
+<div class="gb-container gb-container-75c218c2">
+<h3 class="gb-headline gb-headline-5f76df96 gb-headline-text"><a href="https://pt.jangkargroups.co.id/layanan-notaris-rups-tahunan" data-wpel-link="internal">Layanan Notaris RUPS Tahunan</a></h3>
+
+<p class="gb-headline gb-headline-134db106 gb-headline-text"><time class="entry-date published" datetime="2026-08-29T13:27:15+00:00">August 29, 2026</time></p>
+</div>
+</article></div>
+
+<div class="gb-grid-column gb-grid-column-c72fdb43 gb-query-loop-item post-54337 post type-post status-publish format-standard has-post-thumbnail hentry category-rups"><article class="gb-container gb-container-c72fdb43">
+<div class="gb-container gb-container-7b8bbe81">
+<figure class="gb-block-image gb-block-image-14f4d6b9"><a href="https://pt.jangkargroups.co.id/harga-jasa-notaris-rupslb" data-wpel-link="internal"><img width="818" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20818%201024'%3E%3C/svg%3E" class="gb-image-14f4d6b9" alt="Harga Jasa Notaris RUPSLB" decoding="async" data-lazy-srcset="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344440062-818x1024.jpg 818w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344440062-240x300.jpg 240w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344440062-768x962.jpg 768w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344440062.jpg 920w" data-lazy-sizes="(max-width: 818px) 100vw, 818px" title="Harga Jasa Notaris RUPSLB" data-lazy-src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344440062-818x1024.jpg" /><noscript><img width="818" height="1024" src="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344440062-818x1024.jpg" class="gb-image-14f4d6b9" alt="Harga Jasa Notaris RUPSLB" decoding="async" srcset="https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344440062-818x1024.jpg 818w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344440062-240x300.jpg 240w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344440062-768x962.jpg 768w, https://pt.jangkargroups.co.id/wp-content/uploads/2026/08/1712344440062.jpg 920w" sizes="(max-width: 818px) 100vw, 818px" title="Harga Jasa Notaris RUPSLB" /></noscript></a></figure>
+</div>
+
+<div class="gb-container gb-container-75c218c2">
+<h3 class="gb-headline gb-headline-5f76df96 gb-headline-text"><a href="https://pt.jangkargroups.co.id/harga-jasa-notaris-rupslb" data-wpel-link="internal">Harga Jasa Notaris RUPSLB</a></h3>
+
+<p class="gb-headline gb-headline-134db106 gb-headline-text"><time class="entry-date published" datetime="2026-08-29T13:18:33+00:00">August 29, 2026</time></p>
+</div>
+</article></div>
+</div>
+
+</section>
+
+<section class="gb-container gb-container-747dcfe7">
+
+<h2 class="gb-headline gb-headline-175ee41e gb-headline-text">Follow us</h2>
+
+
+<div class="gb-container gb-container-fa2ffe92">
+
+<a class="gb-button gb-button-8373d550" href="#"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></span></a>
+
+
+
+<a class="gb-button gb-button-00cc5fe0" href="#"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></span></a>
+
+
+
+<a class="gb-button gb-button-3b6a19e6" href="#"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></span></a>
+
+
+
+<a class="gb-button gb-button-b3608840" href="#"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></span></a>
+
+</div>
+</section>
+</aside>	</div>
+</div>
+
+	</div>
+</div>
+
+
+<div class="site-footer footer-bar-active footer-bar-align-right">
+	<footer class="gb-container gb-container-7be7c313">
+<section class="gb-container gb-container-ba23d58b"><div class="gb-inside-container">
+<div class="gb-grid-wrapper gb-grid-wrapper-a653f470">
+<div class="gb-grid-column gb-grid-column-79e5c517"><section class="gb-container gb-container-79e5c517">
+
+<h4 class="wp-block-heading">PT JANGKAR GLOBAL GROUPS</h4>
+
+
+
+<p class="wp-block-paragraph">Kompleks Produksi Film Negara Jl. Otista Raya No.125 - 127, RT.7/RW.8, Bidara Cina, Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13330 Telp: +6221-22986852 dan +6221-22008353</p>
+
+</section></div>
+
+<div class="gb-grid-column gb-grid-column-c039f873"><section class="gb-container gb-container-c039f873">
+
+<h2 class="gb-headline gb-headline-e25eb4fb gb-headline-text">Info PENDIRIAN PT</h2>
+
+
+
+<ul class="wp-block-list">
+<li style="font-style:normal;font-weight:600"><a href="https://pt.jangkargroups.co.id/cara-pendirian-pt" data-wpel-link="internal">Cara Mendirikan PT </a></li>
+
+
+
+<li style="font-style:normal;font-weight:600"><a href="https://pt.jangkargroups.co.id/syarat-pendirian-pt" title="" data-wpel-link="internal">Syarat Mendirikan PT </a></li>
+
+
+
+<li style="font-style:normal;font-weight:600"><a href="https://pt.jangkargroups.co.id/prosedur-pendirian-pt" data-wpel-link="internal">Prosedur Pendirian PT </a></li>
+
+
+
+<li style="font-style:normal;font-weight:600"><a href="https://pt.jangkargroups.co.id/biaya-pendirian-pt" data-wpel-link="internal">Biaya Mendirikan PT </a></li>
+
+
+
+<li style="font-style:normal;font-weight:600"><a href="https://pt.jangkargroups.co.id/dokumen-pendirian-pt" data-wpel-link="internal">Dokumen Pendirian PT </a></li>
+
+
+
+<li style="font-style:normal;font-weight:600"><a href="https://pt.jangkargroups.co.id/akta-pendirian-pt" data-wpel-link="internal">Akta Pendirian PT </a></li>
+
+
+
+<li style="font-style:normal;font-weight:600"><a href="https://pt.jangkargroups.co.id/jenis-jenis-pt" title="" data-wpel-link="internal">Jenis-Jenis PT </a></li>
+
+
+
+<li style="font-style:normal;font-weight:600"><a href="https://pt.jangkargroups.co.id/modal-pendirian-pt" data-wpel-link="internal">Modal Pendirian PT </a></li>
+
+
+
+<li style="font-style:normal;font-weight:600"><a href="https://pt.jangkargroups.co.id/perizinan-pendirian-pt" title="" data-wpel-link="internal">Perizinan Pendirian PT</a></li>
+</ul>
+
+</section></div>
+
+<div class="gb-grid-column gb-grid-column-b43166c8"><section class="gb-container gb-container-b43166c8">
+
+<h3 class="gb-headline gb-headline-15493296 gb-headline-text"><a href="https://pt.jangkargroups.co.id/pt/" title="" data-wpel-link="internal">JASA Pendirian PT</a></h3>
+
+
+
+<ul class="wp-block-list has-var-base-2-color has-text-color">
+<li><a href="https://pt.jangkargroups.co.id/layanan/di-jakarta/" title="" data-wpel-link="internal">Pendirian PT Jakarta</a></li>
+
+
+
+<li><a href="https://pt.jangkargroups.co.id/layanan/pendirian-pt-bandung" title="" data-wpel-link="internal">Pendirian PT&nbsp;</a><a href="https://pt.jangkargroups.co.id/layanan/pendirian-pt-bandung/" data-wpel-link="internal">Bandung</a></li>
+</ul>
+
+
+
+<h3 class="gb-headline gb-headline-226bbb23 gb-headline-text"><a href="https://pt.jangkargroups.co.id/pendirian-pt-pma" title="" data-wpel-link="internal">PENDIRIAN PT PMA</a></h3>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://pt.jangkargroups.co.id/layanan/pma-di-jakarta/" data-wpel-link="internal">Pendirian PT PMA Jakarta</a></li>
+
+
+
+<li><a href="https://pt.jangkargroups.co.id/layanan/pendirian-pt-pma/" data-wpel-link="internal">Pendirian PT PMA Bandung</a></li>
+</ul>
+
+
+
+<h3 class="gb-headline gb-headline-f641d256 gb-headline-text"><a href="https://pt.jangkargroups.co.id/layanan/pendirian-pt-perorangan-di-bandung/" data-wpel-link="internal">PT PERORANGAN</a></h3>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://pt.jangkargroups.co.id/layanan/pendirian-pt-perorangan-di-bandung/" data-wpel-link="internal">PT Perorangan Jakarta</a></li>
+
+
+
+<li><a href="https://pt.jangkargroups.co.id/layanan/pendirian-pt-perorangan-di-bandung/" data-wpel-link="internal">PT Perorangan Bandung</a></li>
+</ul>
+
+</section></div>
+</div>
+</div></section>
+
+<section class="gb-container gb-container-3a035f8d">
+<div class="gb-container gb-container-a9a9c67e">
+
+<p class="gb-headline gb-headline-102b5a4a gb-headline-text">© 2019 <a href="https://pt.jangkargroups.co.id/" data-wpel-link="internal">Pendirian PT</a>•</p>
+
+
+<div class="gb-container gb-container-7003965f">
+
+<p class="gb-headline gb-headline-6b46c508 gb-headline-text">Style guide</p>
+
+
+
+<p class="gb-headline gb-headline-5acf988e gb-headline-text">Credits</p>
+
+
+
+<p class="gb-headline gb-headline-5e5b1560 gb-headline-text">Privacy policy</p>
+
+</div>
+</div>
+</section>
+</footer><div class="wa-button">
+  <a href="https://api.whatsapp.com/send/?phone=6281290434111&amp;text=Halo%20JangkarGroup%2C%20saya%20ingin%20konsultasi%20dulu%20tentang...&amp;type=phone_number&amp;app_absent=0" title="Hubungi kami via WhatsApp" data-wpel-link="external" rel="nofollow noopener">
+    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Chat Whatsapp" data-lazy-src="https://jangkargroups.co.id/wp-content/uploads/2022/02/whatsapp-tombol.png#main"><noscript><img src="https://jangkargroups.co.id/wp-content/uploads/2022/02/whatsapp-tombol.png#main" alt="Chat Whatsapp"></noscript>
+    Chat via WhatsApp
+  </a>
+</div></div>
+
+		<nav id="generate-slideout-menu" class="main-navigation slideout-navigation"  >
+			<div class="inside-navigation grid-container grid-parent">
+				<button class="slideout-exit has-svg-icon"><span class="gp-icon pro-close">
+				<svg viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+					<path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+				</svg>
+			</span> <span class="screen-reader-text">Close</span></button><div class="main-nav"><ul id="menu-main-1" class=" slideout-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-371"><a href="https://pt.jangkargroups.co.id/" data-wpel-link="internal">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4867"><a href="https://pt.jangkargroups.co.id/about" data-wpel-link="internal">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4819"><a href="https://pt.jangkargroups.co.id/layanan" data-wpel-link="internal">Layanan</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="https://pt.jangkargroups.co.id/team" data-wpel-link="internal">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4866"><a href="https://pt.jangkargroups.co.id/contact" data-wpel-link="internal">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54032"><a href="https://pt.jangkargroups.co.id/laporan-tahunan-pt-ahu" data-wpel-link="internal">Laporan Tahunan PT</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15798"><a href="https://pt.jangkargroups.co.id/terms" data-wpel-link="internal">Terms</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-44576"><a href="https://pt.jangkargroups.co.id/category/faq" data-wpel-link="internal">FAQ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-369"><a href="https://pt.jangkargroups.co.id/blog" data-wpel-link="internal">Blog</a></li>
+</ul></div>			</div><!-- .inside-navigation -->
+		</nav><!-- #site-navigation -->
+
+					<div class="slideout-overlay">
+							</div>
+			<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/generatepress/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="rocketlazyloadscript" id="generate-a11y">
+!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("pointerdown",(function(){e.classList.add("using-mouse")}),{passive:!0}),e.addEventListener("keydown",(function(){e.classList.remove("using-mouse")}),{passive:!0})}}();
+</script>
+	<div class="gp-modal gp-search-modal" id="gp-search" role="dialog" aria-modal="true" aria-label="Search">
+		<div class="gp-modal__overlay" tabindex="-1" data-gpmodal-close>
+			<div class="gp-modal__container">
+					<form role="search" method="get" class="search-modal-form" action="https://pt.jangkargroups.co.id/">
+		<label for="search-modal-input" class="screen-reader-text">Search for:</label>
+		<div class="search-modal-fields">
+			<input id="search-modal-input" type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+			<button aria-label="Search"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill-rule="evenodd" clip-rule="evenodd" d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" /></svg></span></button>
+		</div>
+			</form>
+				</div>
+		</div>
+	</div>
+	<script type="rocketlazyloadscript" id="generate-sticky-js" src="https://pt.jangkargroups.co.id/wp-content/plugins/gp-premium/menu-plus/functions/js/sticky.min.js?ver=2.5.6" defer></script>
+<script id="generate-offside-js-extra">
+var offSide = {"side":"right"};
+//# sourceURL=generate-offside-js-extra
+</script>
+<script type="rocketlazyloadscript" id="generate-offside-js" src="https://pt.jangkargroups.co.id/wp-content/plugins/gp-premium/menu-plus/functions/js/offside.min.js?ver=2.5.6" defer></script>
+<script id="eztoc-scroll-scriptjs-js-extra">
+var eztoc_smooth_local = {"scroll_offset":"30","add_request_uri":"","add_self_reference_link":""};
+//# sourceURL=eztoc-scroll-scriptjs-js-extra
+</script>
+<script type="rocketlazyloadscript" id="eztoc-scroll-scriptjs-js" src="https://pt.jangkargroups.co.id/wp-content/plugins/easy-table-of-contents/assets/js/smooth_scroll.min.js?ver=2.0.87" defer></script>
+<script type="rocketlazyloadscript" id="eztoc-js-cookie-js" src="https://pt.jangkargroups.co.id/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js?ver=2.2.1" defer></script>
+<script type="rocketlazyloadscript" id="eztoc-jquery-sticky-kit-js" src="https://pt.jangkargroups.co.id/wp-content/plugins/easy-table-of-contents/vendor/sticky-kit/jquery.sticky-kit.min.js?ver=1.9.2" defer></script>
+<script id="eztoc-js-js-extra">
+var ezTOC = {"smooth_scroll":"1","visibility_hide_by_default":"","scroll_offset":"30","fallbackIcon":"\u003Cspan class=\"\"\u003E\u003Cspan class=\"eztoc-hide\" style=\"display:none;\"\u003EToggle\u003C/span\u003E\u003Cspan class=\"ez-toc-icon-toggle-span\"\u003E\u003Csvg style=\"fill: #999;color:#999\" xmlns=\"http://www.w3.org/2000/svg\" class=\"list-377408\" width=\"20px\" height=\"20px\" viewBox=\"0 0 24 24\" fill=\"none\"\u003E\u003Cpath d=\"M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z\" fill=\"currentColor\"\u003E\u003C/path\u003E\u003C/svg\u003E\u003Csvg style=\"fill: #999;color:#999\" class=\"arrow-unsorted-368013\" xmlns=\"http://www.w3.org/2000/svg\" width=\"10px\" height=\"10px\" viewBox=\"0 0 24 24\" version=\"1.2\" baseProfile=\"tiny\"\u003E\u003Cpath d=\"M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z\"/\u003E\u003C/svg\u003E\u003C/span\u003E\u003C/span\u003E","chamomile_theme_is_on":""};
+//# sourceURL=eztoc-js-js-extra
+</script>
+<script type="rocketlazyloadscript" id="eztoc-js-js" src="https://pt.jangkargroups.co.id/wp-content/plugins/easy-table-of-contents/assets/js/front.min.js?ver=2.0.87-1787987311" defer></script>
+<script type="rocketlazyloadscript" id="generate-menu-js-before">
+var generatepressMenu = {"toggleOpenedSubMenus":true,"openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
+//# sourceURL=generate-menu-js-before
+</script>
+<script type="rocketlazyloadscript" id="generate-menu-js" src="https://pt.jangkargroups.co.id/wp-content/themes/generatepress/assets/js/menu.min.js?ver=3.6.1" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" id="generate-modal-js" src="https://pt.jangkargroups.co.id/wp-content/cache/min/1/wp-content/themes/generatepress/assets/dist/modal.js?ver=1787664450" defer></script>
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://pt.jangkargroups.co.id/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
+<!--Cached using Nginx-Helper on 2026-09-02 05:14:10. It took 138 queries executed in 1.295 seconds.-->
+<!--Visit http://wordpress.org/extend/plugins/nginx-helper/faq/ for more details-->
